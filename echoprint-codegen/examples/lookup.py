@@ -11,7 +11,7 @@ import os
 import pyechonest.config as config
 import pyechonest.song as song
 
-config.CODEGEN_BINARY_OVERRIDE = os.path.abspath("../echoprint-codegen/echoprint-codegen")
+config.CODEGEN_BINARY_OVERRIDE = os.path.abspath("../echoprint-codegen")
 
 # Put your API key in a shell variable ECHO_NEST_API_KEY, or put it here
 # config.ECHO_NEST_API_KEY='KEY HERE'
@@ -22,16 +22,14 @@ def lookup(file):
     if len(fp) and "code" in fp[0]:
         # The version parameter to song/identify indicates the use of echoprint
         result = song.identify(query_obj=fp, version="4.11")
-        # print "Got result:", result
+        print "Got result:", result
         if len(result):
-            print '{'
-            print ' "artist": { "name": "%s", "id": "%s" },' % (result[0].artist_name, result[0].artist_id)
-            print ' "song": { "title": "%s", "id": "%s" }' % (result[0].title, result[0].id)
-            print '}'
+            print "Artist: %s (%s)" % (result[0].artist_name, result[0].artist_id)
+            print "Song: %s (%s)" % (result[0].title, result[0].id)
         else:
-            print '{ "error": "No match. This track may not be in the database yet" }'
+            print "No match. This track may not be in the database yet."
     else:
-        print '{ "error": "Couldn\'t decode %s" }' % file
+        print "Couldn't decode", file
             
 
 if __name__ == "__main__":

@@ -16,10 +16,10 @@ i = 10
 last_verified = None
 last_id = None
 while i > 0:
-	os.popen("./timeout -s 15 -t 10 ./record.sh 2>&1 >> /dev/null")
+	os.popen("scripts/timeout -s 15 -t 10 scripts/record.sh 2>&1 >> /dev/null")
 	os.popen("killall -9 sox")
 	
-	result = os.popen('export ECHO_NEST_API_KEY=XEL1XZ9B6LIRBKVWP && ./lookup.py /tmp/audio.wav').read()
+	result = os.popen('export ECHO_NEST_API_KEY=XEL1XZ9B6LIRBKVWP && scripts/lookup.py /tmp/audio.wav').read()
 	data = json.loads(result)
 
 	print data
