@@ -4,7 +4,9 @@ import os
 import signal
 import json
 
-TIMEOUT = 20
+FILE = "/tmp/audio.wav"
+APP_KEY = "XEL1XZ9B6LIRBKVWP"
+DURATION = 20
 
 def handler(signum, frame):
     print 'Signal handler called with signal', signum
@@ -17,10 +19,10 @@ signal.signal(15, handler)
 last_verified = None
 last_id = None
 while True:
-	os.popen("scripts/timeout -s 15 -t %d scripts/record.sh 2>&1 >> /dev/null" % TIMEOUT)
+	os.popen("scripts/timeout -s 15 -t %d scripts/record.sh 2>&1 >> /dev/null" % DURATION)
 	os.popen("sleep 1 && killall -9 sox")
 	
-	result = os.popen('export ECHO_NEST_API_KEY=XEL1XZ9B6LIRBKVWP && scripts/lookup.py /tmp/audio.wav').read()
+	result = os.popen('export ECHO_NEST_API_KEY=%s && scripts/lookup.py %s' % (APP_KEY, FILE)).read()
 	data = json.loads(result)
 
 	print data
