@@ -12,10 +12,9 @@ signal.signal(2, handler)
 signal.signal(6, handler)
 signal.signal(15, handler)
 
-i = 10
 last_verified = None
 last_id = None
-while i > 0:
+while True:
 	os.popen("scripts/timeout -s 15 -t 10 scripts/record.sh 2>&1 >> /dev/null")
 	os.popen("killall -9 sox")
 	
