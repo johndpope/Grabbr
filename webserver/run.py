@@ -14,7 +14,7 @@ def index():
     #     seed.create('me', 1000)
 
     return render_template('index.html',
-        content1 = Markup('<a href="https://connect.deezer.com/oauth/auth.php?app_id=134561&redirect_uri=http%3A%2F%2Fkobhqlt.fr%3A5000%2Fauth%2F&perms=basic_access,manage_library">Login with Deezer!</a>'),
+        content1 = Markup('<a href="https://connect.deezer.com/oauth/auth.php?app_id=135211&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2F&perms=basic_access,manage_library">Login with Deezer!</a>'),
         content2 = 'thankubro')
 
 @app.route('/auth/')
@@ -24,8 +24,8 @@ def auth():
 
     if "code" in request.args:
         
-        app_id = "134561"
-        app_secret = "f27630785ac0b59c3da1efdd28334f7d"
+        app_id = "135211"
+        app_secret = "c0da74a61122255c11b23b3c56028e2e"
 
         token_url = "https://connect.deezer.com/oauth/access_token.php?app_id=" + str(app_id) \
                     + "&secret=" + app_secret + "&code=" + request.args["code"]
@@ -45,7 +45,7 @@ def auth():
     elif 'error_reason' in request.args:
         return render_template('index.html',
             content1 = 'Authentification failed',
-            content2 = Markup('<a href="https://connect.deezer.com/oauth/auth.php?app_id=134561&redirect_uri=http%3A%2F%2Fkobhqlt.fr%3A5000%2Fauth%2F&perms=basic_access,manage_library">Try again</a>'))
+            content2 = Markup('<a href="https://connect.deezer.com/oauth/auth.php?app_id=135211&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Fauth%2F&perms=basic_access,manage_library">Try again</a>'))
 
     return render_template('index.html',
         content1 = 'You are now logged in !',
