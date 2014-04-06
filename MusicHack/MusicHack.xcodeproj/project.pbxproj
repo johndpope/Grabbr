@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A289DAE518F0857E001D28EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DAE418F0857E001D28EA /* Cocoa.framework */; };
+		A289DAEF18F0857E001D28EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A289DAED18F0857E001D28EA /* InfoPlist.strings */; };
+		A289DAF118F0857E001D28EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A289DAF018F0857E001D28EA /* main.m */; };
+		A289DAF518F0857E001D28EA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A289DAF318F0857E001D28EA /* Credits.rtf */; };
+		A289DAF818F0857E001D28EA /* MHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A289DAF718F0857E001D28EA /* MHAppDelegate.m */; };
+		A289DAFB18F0857E001D28EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A289DAF918F0857E001D28EA /* MainMenu.xib */; };
+		A289DAFD18F0857E001D28EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A289DAFC18F0857E001D28EA /* Images.xcassets */; };
+		A289DB0418F0857E001D28EA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DB0318F0857E001D28EA /* XCTest.framework */; };
+		A289DB0518F0857E001D28EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DAE418F0857E001D28EA /* Cocoa.framework */; };
+		A289DB0D18F0857E001D28EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A289DB0B18F0857E001D28EA /* InfoPlist.strings */; };
+		A289DB0F18F0857E001D28EA /* MusicHackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A289DB0E18F0857E001D28EA /* MusicHackTests.m */; };
+		A289DB2218F090B2001D28EA /* menuIcon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A289DB1918F090B2001D28EA /* menuIcon.tiff */; };
+		A289DB2418F090B2001D28EA /* menuIcon1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A289DB1B18F090B2001D28EA /* menuIcon1.tiff */; };
+		A289DB2518F090B2001D28EA /* menuIcon2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A289DB1C18F090B2001D28EA /* menuIcon2.tiff */; };
+		A289DB2618F090B2001D28EA /* menuIcon3.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A289DB1D18F090B2001D28EA /* menuIcon3.tiff */; };
+		A289DB2718F090B2001D28EA /* menuIcon4.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A289DB1E18F090B2001D28EA /* menuIcon4.tiff */; };
+		A289DB2818F090B2001D28EA /* menuIcon5.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A289DB1F18F090B2001D28EA /* menuIcon5.tiff */; };
+		A289DB2918F090B2001D28EA /* menuIcon6.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A289DB2018F090B2001D28EA /* menuIcon6.tiff */; };
+		A289DB2A18F090B2001D28EA /* menuIcon7.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A289DB2118F090B2001D28EA /* menuIcon7.tiff */; };
+		A289DB2D18F09A43001D28EA /* MHListener.m in Sources */ = {isa = PBXBuildFile; fileRef = A289DB2C18F09A43001D28EA /* MHListener.m */; };
+		A289DBE618F0AFAE001D28EA /* listener.py in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DB3A18F0AA56001D28EA /* listener.py */; };
+		A289DBE718F0AFAE001D28EA /* lookup.py in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DB3B18F0AA56001D28EA /* lookup.py */; };
+		A289DBE818F0AFAE001D28EA /* record.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DB3C18F0AA56001D28EA /* record.sh */; };
+		A289DBE918F0AFAE001D28EA /* sox in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DB3D18F0AA56001D28EA /* sox */; };
+		A289DBEA18F0AFAE001D28EA /* timeout in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DB3E18F0AA56001D28EA /* timeout */; };
+		A289DBEB18F0AFC4001D28EA /* echoprint-codegen in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DBA818F0AC98001D28EA /* echoprint-codegen */; };
+		A289DBEC18F0AFC4001D28EA /* libcodegen.4.1.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DBC718F0AC98001D28EA /* libcodegen.4.1.1.dylib */; };
+		A289DBED18F0AFEB001D28EA /* menuIcon0.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A289DB1A18F090B2001D28EA /* menuIcon0.tiff */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A289DB0618F0857E001D28EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A289DAD918F0857E001D28EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A289DAE018F0857E001D28EA;
+			remoteInfo = MusicHack;
+		};
+		A289DBE118F0AC98001D28EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A289DBBF18F0AC98001D28EA /* echoprint-codegen-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C8D4AD1C137EE85F00CD506D;
+			remoteInfo = "echoprint-codegen-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A289DBE518F0AF68001D28EA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "~/.music_hack";
+			dstSubfolderSpec = 0;
+			files = (
+				A289DBEB18F0AFC4001D28EA /* echoprint-codegen in CopyFiles */,
+				A289DBEC18F0AFC4001D28EA /* libcodegen.4.1.1.dylib in CopyFiles */,
+				A289DBE618F0AFAE001D28EA /* listener.py in CopyFiles */,
+				A289DBE718F0AFAE001D28EA /* lookup.py in CopyFiles */,
+				A289DBE818F0AFAE001D28EA /* record.sh in CopyFiles */,
+				A289DBE918F0AFAE001D28EA /* sox in CopyFiles */,
+				A289DBEA18F0AFAE001D28EA /* timeout in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A289DAE118F0857E001D28EA /* MusicHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A289DAE418F0857E001D28EA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A289DAE718F0857E001D28EA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A289DAE818F0857E001D28EA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A289DAE918F0857E001D28EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A289DAEC18F0857E001D28EA /* MusicHack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicHack-Info.plist"; sourceTree = "<group>"; };
+		A289DAEE18F0857E001D28EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A289DAF018F0857E001D28EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A289DAF218F0857E001D28EA /* MusicHack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicHack-Prefix.pch"; sourceTree = "<group>"; };
+		A289DAF418F0857E001D28EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		A289DAF618F0857E001D28EA /* MHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHAppDelegate.h; sourceTree = "<group>"; };
+		A289DAF718F0857E001D28EA /* MHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHAppDelegate.m; sourceTree = "<group>"; };
+		A289DAFA18F0857E001D28EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A289DAFC18F0857E001D28EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A289DB0218F0857E001D28EA /* MusicHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A289DB0318F0857E001D28EA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A289DB0A18F0857E001D28EA /* MusicHackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicHackTests-Info.plist"; sourceTree = "<group>"; };
+		A289DB0C18F0857E001D28EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A289DB0E18F0857E001D28EA /* MusicHackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicHackTests.m; sourceTree = "<group>"; };
+		A289DB1918F090B2001D28EA /* menuIcon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menuIcon.tiff; sourceTree = "<group>"; };
+		A289DB1A18F090B2001D28EA /* menuIcon0.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menuIcon0.tiff; sourceTree = "<group>"; };
+		A289DB1B18F090B2001D28EA /* menuIcon1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menuIcon1.tiff; sourceTree = "<group>"; };
+		A289DB1C18F090B2001D28EA /* menuIcon2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menuIcon2.tiff; sourceTree = "<group>"; };
+		A289DB1D18F090B2001D28EA /* menuIcon3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menuIcon3.tiff; sourceTree = "<group>"; };
+		A289DB1E18F090B2001D28EA /* menuIcon4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menuIcon4.tiff; sourceTree = "<group>"; };
+		A289DB1F18F090B2001D28EA /* menuIcon5.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menuIcon5.tiff; sourceTree = "<group>"; };
+		A289DB2018F090B2001D28EA /* menuIcon6.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menuIcon6.tiff; sourceTree = "<group>"; };
+		A289DB2118F090B2001D28EA /* menuIcon7.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menuIcon7.tiff; sourceTree = "<group>"; };
+		A289DB2B18F09A43001D28EA /* MHListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHListener.h; path = Classes/MHListener.h; sourceTree = "<group>"; };
+		A289DB2C18F09A43001D28EA /* MHListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHListener.m; path = Classes/MHListener.m; sourceTree = "<group>"; };
+		A289DB3A18F0AA56001D28EA /* listener.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = listener.py; sourceTree = "<group>"; };
+		A289DB3B18F0AA56001D28EA /* lookup.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = lookup.py; sourceTree = "<group>"; };
+		A289DB3C18F0AA56001D28EA /* record.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = record.sh; sourceTree = "<group>"; };
+		A289DB3D18F0AA56001D28EA /* sox */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = sox; sourceTree = "<group>"; };
+		A289DB3E18F0AA56001D28EA /* timeout */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = timeout; sourceTree = "<group>"; };
+		A289DBA618F0AC98001D28EA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A289DBA718F0AC98001D28EA /* AUTHORS */ = {isa = PBXFileReference; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
+		A289DBA818F0AC98001D28EA /* echoprint-codegen */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "echoprint-codegen"; sourceTree = "<group>"; };
+		A289DBAA18F0AC98001D28EA /* lookup.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = lookup.py; sourceTree = "<group>"; };
+		A289DBAB18F0AC98001D28EA /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A289DBAC18F0AC98001D28EA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A289DBAE18F0AC98001D28EA /* AudioBufferInput.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioBufferInput.cxx; sourceTree = "<group>"; };
+		A289DBAF18F0AC98001D28EA /* AudioBufferInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioBufferInput.h; sourceTree = "<group>"; };
+		A289DBB018F0AC98001D28EA /* AudioBufferInput.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = AudioBufferInput.o; sourceTree = "<group>"; };
+		A289DBB118F0AC98001D28EA /* AudioStreamInput.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioStreamInput.cxx; sourceTree = "<group>"; };
+		A289DBB218F0AC98001D28EA /* AudioStreamInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioStreamInput.h; sourceTree = "<group>"; };
+		A289DBB318F0AC98001D28EA /* AudioStreamInput.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = AudioStreamInput.o; sourceTree = "<group>"; };
+		A289DBB418F0AC98001D28EA /* Base64.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Base64.cxx; sourceTree = "<group>"; };
+		A289DBB518F0AC98001D28EA /* Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		A289DBB618F0AC98001D28EA /* Base64.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = Base64.o; sourceTree = "<group>"; };
+		A289DBB718F0AC98001D28EA /* Codegen.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Codegen.cxx; sourceTree = "<group>"; };
+		A289DBB818F0AC98001D28EA /* Codegen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Codegen.h; sourceTree = "<group>"; };
+		A289DBB918F0AC98001D28EA /* Codegen.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = Codegen.o; sourceTree = "<group>"; };
+		A289DBBA18F0AC98001D28EA /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		A289DBBD18F0AC98001D28EA /* echoprint-codegen-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "echoprint-codegen-ios-Prefix.pch"; sourceTree = "<group>"; };
+		A289DBBE18F0AC98001D28EA /* echoprint-codegen-ios.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "echoprint-codegen-ios.xcconfig"; sourceTree = "<group>"; };
+		A289DBBF18F0AC98001D28EA /* echoprint-codegen-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "echoprint-codegen-ios.xcodeproj"; sourceTree = "<group>"; };
+		A289DBC218F0AC98001D28EA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A289DBC318F0AC98001D28EA /* File.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
+		A289DBC418F0AC98001D28EA /* Fingerprint.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Fingerprint.cxx; sourceTree = "<group>"; };
+		A289DBC518F0AC98001D28EA /* Fingerprint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fingerprint.h; sourceTree = "<group>"; };
+		A289DBC618F0AC98001D28EA /* Fingerprint.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = Fingerprint.o; sourceTree = "<group>"; };
+		A289DBC718F0AC98001D28EA /* libcodegen.4.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcodegen.4.1.1.dylib; sourceTree = "<group>"; };
+		A289DBC818F0AC98001D28EA /* main.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cxx; sourceTree = "<group>"; };
+		A289DBC918F0AC98001D28EA /* main.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = main.o; sourceTree = "<group>"; };
+		A289DBCA18F0AC98001D28EA /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		A289DBCB18F0AC98001D28EA /* MatrixUtility.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MatrixUtility.cxx; sourceTree = "<group>"; };
+		A289DBCC18F0AC98001D28EA /* MatrixUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrixUtility.h; sourceTree = "<group>"; };
+		A289DBCD18F0AC98001D28EA /* MatrixUtility.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = MatrixUtility.o; sourceTree = "<group>"; };
+		A289DBCE18F0AC98001D28EA /* Metadata.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Metadata.cxx; sourceTree = "<group>"; };
+		A289DBCF18F0AC98001D28EA /* Metadata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Metadata.h; sourceTree = "<group>"; };
+		A289DBD018F0AC98001D28EA /* Metadata.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = Metadata.o; sourceTree = "<group>"; };
+		A289DBD118F0AC98001D28EA /* Params.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Params.h; sourceTree = "<group>"; };
+		A289DBD218F0AC98001D28EA /* SubbandAnalysis.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SubbandAnalysis.cxx; sourceTree = "<group>"; };
+		A289DBD318F0AC98001D28EA /* SubbandAnalysis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubbandAnalysis.h; sourceTree = "<group>"; };
+		A289DBD418F0AC98001D28EA /* SubbandAnalysis.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = SubbandAnalysis.o; sourceTree = "<group>"; };
+		A289DBD518F0AC98001D28EA /* Whitening.cxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Whitening.cxx; sourceTree = "<group>"; };
+		A289DBD618F0AC98001D28EA /* Whitening.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Whitening.h; sourceTree = "<group>"; };
+		A289DBD718F0AC98001D28EA /* Whitening.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = Whitening.o; sourceTree = "<group>"; };
+		A289DBD818F0AC98001D28EA /* win_funcs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = win_funcs.h; sourceTree = "<group>"; };
+		A289DBD918F0AC98001D28EA /* win_unistd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = win_unistd.h; sourceTree = "<group>"; };
+		A289DBDB18F0AC98001D28EA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A289DBDC18F0AC98001D28EA /* codegen.sln */ = {isa = PBXFileReference; lastKnownFileType = text; path = codegen.sln; sourceTree = "<group>"; };
+		A289DBDD18F0AC98001D28EA /* codegen.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = codegen.vcxproj; sourceTree = "<group>"; };
+		A289DBDE18F0AC98001D28EA /* codegen.vcxproj.filters */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = codegen.vcxproj.filters; sourceTree = "<group>"; };
+		A289DBDF18F0AC98001D28EA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A289DADE18F0857E001D28EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A289DAE518F0857E001D28EA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A289DAFF18F0857E001D28EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A289DB0518F0857E001D28EA /* Cocoa.framework in Frameworks */,
+				A289DB0418F0857E001D28EA /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A289DAD818F0857E001D28EA = {
+			isa = PBXGroup;
+			children = (
+				A289DAEA18F0857E001D28EA /* MusicHack */,
+				A289DB0818F0857E001D28EA /* MusicHackTests */,
+				A289DAE318F0857E001D28EA /* Frameworks */,
+				A289DAE218F0857E001D28EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A289DAE218F0857E001D28EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A289DAE118F0857E001D28EA /* MusicHack.app */,
+				A289DB0218F0857E001D28EA /* MusicHackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A289DAE318F0857E001D28EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A289DAE418F0857E001D28EA /* Cocoa.framework */,
+				A289DB0318F0857E001D28EA /* XCTest.framework */,
+				A289DAE618F0857E001D28EA /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A289DAE618F0857E001D28EA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A289DAE718F0857E001D28EA /* AppKit.framework */,
+				A289DAE818F0857E001D28EA /* CoreData.framework */,
+				A289DAE918F0857E001D28EA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		A289DAEA18F0857E001D28EA /* MusicHack */ = {
+			isa = PBXGroup;
+			children = (
+				A289DB1818F090B2001D28EA /* Resources */,
+				A289DAF618F0857E001D28EA /* MHAppDelegate.h */,
+				A289DAF718F0857E001D28EA /* MHAppDelegate.m */,
+				A289DB2B18F09A43001D28EA /* MHListener.h */,
+				A289DB2C18F09A43001D28EA /* MHListener.m */,
+				A289DAF918F0857E001D28EA /* MainMenu.xib */,
+				A289DAFC18F0857E001D28EA /* Images.xcassets */,
+				A289DAEB18F0857E001D28EA /* Supporting Files */,
+			);
+			path = MusicHack;
+			sourceTree = "<group>";
+		};
+		A289DAEB18F0857E001D28EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A289DAEC18F0857E001D28EA /* MusicHack-Info.plist */,
+				A289DAED18F0857E001D28EA /* InfoPlist.strings */,
+				A289DAF018F0857E001D28EA /* main.m */,
+				A289DAF218F0857E001D28EA /* MusicHack-Prefix.pch */,
+				A289DAF318F0857E001D28EA /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A289DB0818F0857E001D28EA /* MusicHackTests */ = {
+			isa = PBXGroup;
+			children = (
+				A289DB0E18F0857E001D28EA /* MusicHackTests.m */,
+				A289DB0918F0857E001D28EA /* Supporting Files */,
+			);
+			path = MusicHackTests;
+			sourceTree = "<group>";
+		};
+		A289DB0918F0857E001D28EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A289DB0A18F0857E001D28EA /* MusicHackTests-Info.plist */,
+				A289DB0B18F0857E001D28EA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A289DB1818F090B2001D28EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A289DBA518F0AC98001D28EA /* echoprint-codegen */,
+				A289DB3918F0AA56001D28EA /* scripts */,
+				A289DB1918F090B2001D28EA /* menuIcon.tiff */,
+				A289DB1A18F090B2001D28EA /* menuIcon0.tiff */,
+				A289DB1B18F090B2001D28EA /* menuIcon1.tiff */,
+				A289DB1C18F090B2001D28EA /* menuIcon2.tiff */,
+				A289DB1D18F090B2001D28EA /* menuIcon3.tiff */,
+				A289DB1E18F090B2001D28EA /* menuIcon4.tiff */,
+				A289DB1F18F090B2001D28EA /* menuIcon5.tiff */,
+				A289DB2018F090B2001D28EA /* menuIcon6.tiff */,
+				A289DB2118F090B2001D28EA /* menuIcon7.tiff */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A289DB3918F0AA56001D28EA /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				A289DB3A18F0AA56001D28EA /* listener.py */,
+				A289DB3B18F0AA56001D28EA /* lookup.py */,
+				A289DB3C18F0AA56001D28EA /* record.sh */,
+				A289DB3D18F0AA56001D28EA /* sox */,
+				A289DB3E18F0AA56001D28EA /* timeout */,
+			);
+			name = scripts;
+			path = ../../../scripts;
+			sourceTree = "<group>";
+		};
+		A289DBA518F0AC98001D28EA /* echoprint-codegen */ = {
+			isa = PBXGroup;
+			children = (
+				A289DBA618F0AC98001D28EA /* .gitignore */,
+				A289DBA718F0AC98001D28EA /* AUTHORS */,
+				A289DBA818F0AC98001D28EA /* echoprint-codegen */,
+				A289DBA918F0AC98001D28EA /* examples */,
+				A289DBAB18F0AC98001D28EA /* LICENSE */,
+				A289DBAC18F0AC98001D28EA /* README.md */,
+				A289DBAD18F0AC98001D28EA /* src */,
+				A289DBDA18F0AC98001D28EA /* windows */,
+			);
+			name = "echoprint-codegen";
+			path = "../../../echoprint-codegen";
+			sourceTree = "<group>";
+		};
+		A289DBA918F0AC98001D28EA /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				A289DBAA18F0AC98001D28EA /* lookup.py */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		A289DBAD18F0AC98001D28EA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A289DBAE18F0AC98001D28EA /* AudioBufferInput.cxx */,
+				A289DBAF18F0AC98001D28EA /* AudioBufferInput.h */,
+				A289DBB018F0AC98001D28EA /* AudioBufferInput.o */,
+				A289DBB118F0AC98001D28EA /* AudioStreamInput.cxx */,
+				A289DBB218F0AC98001D28EA /* AudioStreamInput.h */,
+				A289DBB318F0AC98001D28EA /* AudioStreamInput.o */,
+				A289DBB418F0AC98001D28EA /* Base64.cxx */,
+				A289DBB518F0AC98001D28EA /* Base64.h */,
+				A289DBB618F0AC98001D28EA /* Base64.o */,
+				A289DBB718F0AC98001D28EA /* Codegen.cxx */,
+				A289DBB818F0AC98001D28EA /* Codegen.h */,
+				A289DBB918F0AC98001D28EA /* Codegen.o */,
+				A289DBBA18F0AC98001D28EA /* Common.h */,
+				A289DBBB18F0AC98001D28EA /* echoprint-codegen-ios */,
+				A289DBC318F0AC98001D28EA /* File.h */,
+				A289DBC418F0AC98001D28EA /* Fingerprint.cxx */,
+				A289DBC518F0AC98001D28EA /* Fingerprint.h */,
+				A289DBC618F0AC98001D28EA /* Fingerprint.o */,
+				A289DBC718F0AC98001D28EA /* libcodegen.4.1.1.dylib */,
+				A289DBC818F0AC98001D28EA /* main.cxx */,
+				A289DBC918F0AC98001D28EA /* main.o */,
+				A289DBCA18F0AC98001D28EA /* Makefile */,
+				A289DBCB18F0AC98001D28EA /* MatrixUtility.cxx */,
+				A289DBCC18F0AC98001D28EA /* MatrixUtility.h */,
+				A289DBCD18F0AC98001D28EA /* MatrixUtility.o */,
+				A289DBCE18F0AC98001D28EA /* Metadata.cxx */,
+				A289DBCF18F0AC98001D28EA /* Metadata.h */,
+				A289DBD018F0AC98001D28EA /* Metadata.o */,
+				A289DBD118F0AC98001D28EA /* Params.h */,
+				A289DBD218F0AC98001D28EA /* SubbandAnalysis.cxx */,
+				A289DBD318F0AC98001D28EA /* SubbandAnalysis.h */,
+				A289DBD418F0AC98001D28EA /* SubbandAnalysis.o */,
+				A289DBD518F0AC98001D28EA /* Whitening.cxx */,
+				A289DBD618F0AC98001D28EA /* Whitening.h */,
+				A289DBD718F0AC98001D28EA /* Whitening.o */,
+				A289DBD818F0AC98001D28EA /* win_funcs.h */,
+				A289DBD918F0AC98001D28EA /* win_unistd.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		A289DBBB18F0AC98001D28EA /* echoprint-codegen-ios */ = {
+			isa = PBXGroup;
+			children = (
+				A289DBBC18F0AC98001D28EA /* echoprint-codegen-ios */,
+				A289DBBE18F0AC98001D28EA /* echoprint-codegen-ios.xcconfig */,
+				A289DBBF18F0AC98001D28EA /* echoprint-codegen-ios.xcodeproj */,
+				A289DBC218F0AC98001D28EA /* README.md */,
+			);
+			path = "echoprint-codegen-ios";
+			sourceTree = "<group>";
+		};
+		A289DBBC18F0AC98001D28EA /* echoprint-codegen-ios */ = {
+			isa = PBXGroup;
+			children = (
+				A289DBBD18F0AC98001D28EA /* echoprint-codegen-ios-Prefix.pch */,
+			);
+			path = "echoprint-codegen-ios";
+			sourceTree = "<group>";
+		};
+		A289DBC018F0AC98001D28EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A289DBE218F0AC98001D28EA /* libechoprint-codegen-ios.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A289DBDA18F0AC98001D28EA /* windows */ = {
+			isa = PBXGroup;
+			children = (
+				A289DBDB18F0AC98001D28EA /* .gitignore */,
+				A289DBDC18F0AC98001D28EA /* codegen.sln */,
+				A289DBDD18F0AC98001D28EA /* codegen.vcxproj */,
+				A289DBDE18F0AC98001D28EA /* codegen.vcxproj.filters */,
+				A289DBDF18F0AC98001D28EA /* README.md */,
+			);
+			path = windows;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A289DAE018F0857E001D28EA /* MusicHack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A289DB1218F0857E001D28EA /* Build configuration list for PBXNativeTarget "MusicHack" */;
+			buildPhases = (
+				A289DADD18F0857E001D28EA /* Sources */,
+				A289DADE18F0857E001D28EA /* Frameworks */,
+				A289DADF18F0857E001D28EA /* Resources */,
+				A289DBE518F0AF68001D28EA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicHack;
+			productName = MusicHack;
+			productReference = A289DAE118F0857E001D28EA /* MusicHack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A289DB0118F0857E001D28EA /* MusicHackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A289DB1518F0857E001D28EA /* Build configuration list for PBXNativeTarget "MusicHackTests" */;
+			buildPhases = (
+				A289DAFE18F0857E001D28EA /* Sources */,
+				A289DAFF18F0857E001D28EA /* Frameworks */,
+				A289DB0018F0857E001D28EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A289DB0718F0857E001D28EA /* PBXTargetDependency */,
+			);
+			name = MusicHackTests;
+			productName = MusicHackTests;
+			productReference = A289DB0218F0857E001D28EA /* MusicHackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A289DAD918F0857E001D28EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MH;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Theo Lubert";
+				TargetAttributes = {
+					A289DB0118F0857E001D28EA = {
+						TestTargetID = A289DAE018F0857E001D28EA;
+					};
+				};
+			};
+			buildConfigurationList = A289DADC18F0857E001D28EA /* Build configuration list for PBXProject "MusicHack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A289DAD818F0857E001D28EA;
+			productRefGroup = A289DAE218F0857E001D28EA /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A289DBC018F0AC98001D28EA /* Products */;
+					ProjectRef = A289DBBF18F0AC98001D28EA /* echoprint-codegen-ios.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A289DAE018F0857E001D28EA /* MusicHack */,
+				A289DB0118F0857E001D28EA /* MusicHackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A289DBE218F0AC98001D28EA /* libechoprint-codegen-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libechoprint-codegen-ios.a";
+			remoteRef = A289DBE118F0AC98001D28EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A289DADF18F0857E001D28EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A289DBED18F0AFEB001D28EA /* menuIcon0.tiff in Resources */,
+				A289DAEF18F0857E001D28EA /* InfoPlist.strings in Resources */,
+				A289DAFD18F0857E001D28EA /* Images.xcassets in Resources */,
+				A289DAF518F0857E001D28EA /* Credits.rtf in Resources */,
+				A289DB2A18F090B2001D28EA /* menuIcon7.tiff in Resources */,
+				A289DB2218F090B2001D28EA /* menuIcon.tiff in Resources */,
+				A289DAFB18F0857E001D28EA /* MainMenu.xib in Resources */,
+				A289DB2918F090B2001D28EA /* menuIcon6.tiff in Resources */,
+				A289DB2718F090B2001D28EA /* menuIcon4.tiff in Resources */,
+				A289DB2518F090B2001D28EA /* menuIcon2.tiff in Resources */,
+				A289DB2418F090B2001D28EA /* menuIcon1.tiff in Resources */,
+				A289DB2818F090B2001D28EA /* menuIcon5.tiff in Resources */,
+				A289DB2618F090B2001D28EA /* menuIcon3.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A289DB0018F0857E001D28EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A289DB0D18F0857E001D28EA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A289DADD18F0857E001D28EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A289DAF118F0857E001D28EA /* main.m in Sources */,
+				A289DAF818F0857E001D28EA /* MHAppDelegate.m in Sources */,
+				A289DB2D18F09A43001D28EA /* MHListener.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A289DAFE18F0857E001D28EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A289DB0F18F0857E001D28EA /* MusicHackTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A289DB0718F0857E001D28EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A289DAE018F0857E001D28EA /* MusicHack */;
+			targetProxy = A289DB0618F0857E001D28EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A289DAED18F0857E001D28EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A289DAEE18F0857E001D28EA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A289DAF318F0857E001D28EA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A289DAF418F0857E001D28EA /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		A289DAF918F0857E001D28EA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A289DAFA18F0857E001D28EA /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		A289DB0B18F0857E001D28EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A289DB0C18F0857E001D28EA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A289DB1018F0857E001D28EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A289DB1118F0857E001D28EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A289DB1318F0857E001D28EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicHack/MusicHack-Prefix.pch";
+				INFOPLIST_FILE = "MusicHack/MusicHack-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/teos/Dev/OSX/music_hack/echoprint-codegen/src",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A289DB1418F0857E001D28EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicHack/MusicHack-Prefix.pch";
+				INFOPLIST_FILE = "MusicHack/MusicHack-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/teos/Dev/OSX/music_hack/echoprint-codegen/src",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A289DB1618F0857E001D28EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MusicHack.app/Contents/MacOS/MusicHack";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicHack/MusicHack-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MusicHackTests/MusicHackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A289DB1718F0857E001D28EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MusicHack.app/Contents/MacOS/MusicHack";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicHack/MusicHack-Prefix.pch";
+				INFOPLIST_FILE = "MusicHackTests/MusicHackTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A289DADC18F0857E001D28EA /* Build configuration list for PBXProject "MusicHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A289DB1018F0857E001D28EA /* Debug */,
+				A289DB1118F0857E001D28EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A289DB1218F0857E001D28EA /* Build configuration list for PBXNativeTarget "MusicHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A289DB1318F0857E001D28EA /* Debug */,
+				A289DB1418F0857E001D28EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A289DB1518F0857E001D28EA /* Build configuration list for PBXNativeTarget "MusicHackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A289DB1618F0857E001D28EA /* Debug */,
+				A289DB1718F0857E001D28EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A289DAD918F0857E001D28EA /* Project object */;
+}
