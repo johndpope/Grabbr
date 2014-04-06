@@ -14,8 +14,9 @@
         <customObject id="Voe-Tx-rLC" customClass="MHAppDelegate">
             <connections>
                 <outlet property="count" destination="wkC-Ci-Da9" id="4fK-Lp-T6T"/>
+                <outlet property="playlistSection" destination="FgM-k9-Kyf" id="inZ-cy-REF"/>
                 <outlet property="statusMenu" destination="u08-SL-cy0" id="gag-ln-e2o"/>
-                <outlet property="title" destination="SjO-R0-oDK" id="tEZ-xg-aRh"/>
+                <outlet property="title" destination="a7m-Mz-ebf" id="pwH-yK-bOY"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -670,10 +671,13 @@
         </menu>
         <menu id="u08-SL-cy0">
             <items>
-                <menuItem title="Beastie Boys - The Move" id="SjO-R0-oDK">
+                <menuItem title="Currently playing:" enabled="NO" id="SjO-R0-oDK">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="   Beastie Boys - The Move" id="a7m-Mz-ebf">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="listen:" target="Voe-Tx-rLC" id="6Jl-tA-1t2"/>
+                        <action selector="listen:" target="Voe-Tx-rLC" id="hOc-Y3-7p1"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="yjI-vb-cW3"/>

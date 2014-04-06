@@ -44,8 +44,9 @@
                 return [(NSString *)p2[@"title"] compare:p1[@"title"]];
             }];
             for (NSDictionary *playlist in self.playlists) {
+                NSInteger index = [self.statusMenu.itemArray indexOfObject:self.playlistSection] + 1;
                 NSString *title = [NSString stringWithFormat:@"   %@", playlist[@"title"]];
-                NSMenuItem *item = [self.statusMenu insertItemWithTitle:title action:@selector(addToPlaylist:) keyEquivalent:@"" atIndex:3];
+                NSMenuItem *item = [self.statusMenu insertItemWithTitle:title action:@selector(addToPlaylist:) keyEquivalent:@"" atIndex:index];
                 [item setTarget:self];
                 [item setTag:[playlist[@"id"] integerValue]];
             }
@@ -101,7 +102,7 @@
 - (IBAction)listen:(id)sender {
     if (self.listenerTask == nil) {
         if (sender) {
-            self.title.title = @"Listening...";
+            self.title.title = @"   Listening...";
         }
         [self startAnimatingStatusBarIcon];
         self.listenerTask = [MHListener launchWithSelector:^(NSDictionary *data) {
@@ -111,7 +112,7 @@
                 [self notification:self.currentInfo[@"artist"][@"name"]
                               text:self.currentInfo[@"song"][@"title"]];
             }
-            self.title.title = self.currentInfo[@"song"] ? [NSString stringWithFormat:@"%@ - %@", self.currentInfo[@"artist"][@"name"], self.currentInfo[@"song"][@"title"]] : @"No match found";
+            self.title.title = self.currentInfo[@"song"] ? [NSString stringWithFormat:@"   %@ - %@", self.currentInfo[@"artist"][@"name"], self.currentInfo[@"song"][@"title"]] : @"   No match found";
             
             NSLog(@"Listening just finished");
             [self stopAnimatingStatusBarIcon];

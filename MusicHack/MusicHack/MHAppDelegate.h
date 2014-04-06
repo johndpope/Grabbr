@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) IBOutlet NSMenu       *statusMenu;
 @property (nonatomic, strong) IBOutlet NSMenuItem   *title;
+@property (nonatomic, strong) IBOutlet NSMenuItem   *playlistSection;
 @property (nonatomic, strong) IBOutlet NSMenuItem   *count;
 @property (nonatomic, strong) NSStatusItem          *statusItem;
 @property (nonatomic, strong) NSTimer               *animationTimer;
