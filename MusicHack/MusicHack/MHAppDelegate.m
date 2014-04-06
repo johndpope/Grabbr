@@ -32,7 +32,27 @@
     [image setTemplate:YES];
     [self.statusItem setImage:image];
     
+    [self getPlaylist];
     [self listen:self];
+}
+
+- (void)getPlaylist {
+    NSLog(@"Get playlists");
+    if (self.getPlaylistTask == nil) {
+        self.getPlaylistTask = [MHGetPlaylists launchWithSelector:^(NSDictionary *data) {
+            self.playlists = [data[@"array"] sortedArrayUsingComparator:^NSComparisonResult(NSDictionary *p1, NSDictionary *p2) {
+                return [(NSString *)p2[@"title"] compare:p1[@"title"]];
+            }];
+            for (NSDictionary *playlist in self.playlists) {
+                NSString *title = [NSString stringWithFormat:@"   %@", playlist[@"title"]];
+                NSMenuItem *item = [self.statusMenu insertItemWithTitle:title action:@selector(addToPlaylist:) keyEquivalent:@"" atIndex:3];
+                [item setTarget:self];
+                [item setTag:[playlist[@"id"] integerValue]];
+            }
+            self.count.title = [NSString stringWithFormat:@"   (%ld playlists)", self.playlists.count];
+            self.getPlaylistTask = nil;
+        }];
+    }
 }
 
 - (void)updateStatusBarIcon:(NSTimer*)timer {
@@ -49,32 +69,35 @@
     [self.animationTimer invalidate];
 }
 
-- (NSDictionary *)json:(NSString *)str {
-    NSError *error = nil;
-    id object = [NSJSONSerialization JSONObjectWithData:[str dataUsingEncoding:NSUTF8StringEncoding]
-                                                options:0 error:&error];
-    if (!error && [object isKindOfClass:[NSDictionary class]]) {
-        return (NSDictionary *)object;
-    }
-    return @{};
-}
-
 
 #pragma mark - Action methods
 
+- (IBAction)addToPlaylist:(NSMenuItem *)sender {
+    NSLog(@"Add to playlist (%ld)", sender.tag);
+    if (self.addToPlaylistTask == nil && self.currentInfo != nil) {
+        NSDictionary *p = [self.playlists filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(NSDictionary *playlist, NSDictionary *bindings) {
+            return [playlist[@"id"] isEqualToNumber:@(sender.tag)];
+        }]].lastObject;
+        self.addToPlaylistTask = [MHAddToPlaylist launchWithSelector:^(NSDictionary *data) {
+            NSLog(@"ADD result: %@", data);
+            self.addToPlaylistTask = nil;
+        } identifier:[p[@"id"] stringValue] artist:self.currentInfo[@"artist"][@"name"] song:self.currentInfo[@"song"][@"title"]];
+    }
+}
+
 - (IBAction)listen:(id)sender {
     if (self.listenerTask == nil) {
-        [self stopAnimatingStatusBarIcon];
         if (sender) {
             self.title.title = @"Listening...";
         }
-        self.listenerTask = [MHListener launchWithSelector:^(NSString *output) {
-            NSDictionary *data = [self json:output];
+        [self startAnimatingStatusBarIcon];
+        self.listenerTask = [MHListener launchWithSelector:^(NSDictionary *data) {
             NSLog(@"Data: %@", data);
-            self.title.title = data[@"song"] ? data[@"song"][@"title"] : @"No match found";
+            self.currentInfo = data;
+            self.title.title = self.currentInfo[@"song"] ? self.currentInfo[@"song"][@"title"] : @"No match found";
             
             NSLog(@"Listening just finished");
-            [self startAnimatingStatusBarIcon];
+            [self stopAnimatingStatusBarIcon];
             
             self.listenerTask = nil;
             [self performSelector:@selector(listen:) withObject:nil afterDelay:5];

@@ -1,17 +1,17 @@
 //
-//  MHListener.m
+//  MHGetPlaylists.m
 //  MusicHack
 //
-//  Created by Theo LUBERT on 4/5/14.
+//  Created by Theo LUBERT on 4/6/14.
 //  Copyright (c) 2014 Theo Lubert. All rights reserved.
 //
 
-#import "MHListener.h"
+#import "MHGetPlaylists.h"
 
-@implementation MHListener
+@implementation MHGetPlaylists
 
 + (MHTask *)launchWithSelector:(TaskCallback)callback {
-    MHTask *task = [[MHListener alloc] init];
+    MHTask *task = [[MHGetPlaylists alloc] init];
     [task setCallback:callback];
     [task launch];
     return task;
@@ -21,7 +21,7 @@
     NSTask *t = [NSTask new];
     [t setCurrentDirectoryPath:@"~/.music_hack"];
     [t setLaunchPath:@"/usr/bin/python"];
-    [t setArguments:@[ @"listener.py" ]];
+    [t setArguments:@[ @"playlists.py", @"get" ]];
     return t;
 }
 

@@ -35,6 +35,11 @@
 		A289DBEB18F0AFC4001D28EA /* echoprint-codegen in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DBA818F0AC98001D28EA /* echoprint-codegen */; };
 		A289DBEC18F0AFC4001D28EA /* libcodegen.4.1.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DBC718F0AC98001D28EA /* libcodegen.4.1.1.dylib */; };
 		A289DBED18F0AFEB001D28EA /* menuIcon0.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A289DB1A18F090B2001D28EA /* menuIcon0.tiff */; };
+		A289DBF018F0EFD6001D28EA /* MHTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A289DBEF18F0EFD6001D28EA /* MHTask.m */; };
+		A289DBF318F0F431001D28EA /* MHGetPlaylists.m in Sources */ = {isa = PBXBuildFile; fileRef = A289DBF218F0F431001D28EA /* MHGetPlaylists.m */; };
+		A289DBF618F0F543001D28EA /* playlists.py in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DBF418F0F533001D28EA /* playlists.py */; };
+		A289DBF918F0F561001D28EA /* api.py in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DBF718F0F55B001D28EA /* api.py */; };
+		A289DBFC18F13C74001D28EA /* MHAddToPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = A289DBFB18F13C74001D28EA /* MHAddToPlaylist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,8 @@
 			dstPath = "~/.music_hack";
 			dstSubfolderSpec = 0;
 			files = (
+				A289DBF918F0F561001D28EA /* api.py in CopyFiles */,
+				A289DBF618F0F543001D28EA /* playlists.py in CopyFiles */,
 				A289DBEB18F0AFC4001D28EA /* echoprint-codegen in CopyFiles */,
 				A289DBEC18F0AFC4001D28EA /* libcodegen.4.1.1.dylib in CopyFiles */,
 				A289DBE618F0AFAE001D28EA /* listener.py in CopyFiles */,
@@ -160,6 +167,14 @@
 		A289DBDD18F0AC98001D28EA /* codegen.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = codegen.vcxproj; sourceTree = "<group>"; };
 		A289DBDE18F0AC98001D28EA /* codegen.vcxproj.filters */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = codegen.vcxproj.filters; sourceTree = "<group>"; };
 		A289DBDF18F0AC98001D28EA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A289DBEE18F0EFD6001D28EA /* MHTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHTask.h; path = Classes/MHTask.h; sourceTree = "<group>"; };
+		A289DBEF18F0EFD6001D28EA /* MHTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHTask.m; path = Classes/MHTask.m; sourceTree = "<group>"; };
+		A289DBF118F0F431001D28EA /* MHGetPlaylists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHGetPlaylists.h; path = Classes/MHGetPlaylists.h; sourceTree = "<group>"; };
+		A289DBF218F0F431001D28EA /* MHGetPlaylists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHGetPlaylists.m; path = Classes/MHGetPlaylists.m; sourceTree = "<group>"; };
+		A289DBF418F0F533001D28EA /* playlists.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = playlists.py; sourceTree = "<group>"; };
+		A289DBF718F0F55B001D28EA /* api.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = api.py; sourceTree = "<group>"; };
+		A289DBFA18F13C74001D28EA /* MHAddToPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHAddToPlaylist.h; path = Classes/MHAddToPlaylist.h; sourceTree = "<group>"; };
+		A289DBFB18F13C74001D28EA /* MHAddToPlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHAddToPlaylist.m; path = Classes/MHAddToPlaylist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,8 +243,14 @@
 				A289DB1818F090B2001D28EA /* Resources */,
 				A289DAF618F0857E001D28EA /* MHAppDelegate.h */,
 				A289DAF718F0857E001D28EA /* MHAppDelegate.m */,
+				A289DBEE18F0EFD6001D28EA /* MHTask.h */,
+				A289DBEF18F0EFD6001D28EA /* MHTask.m */,
 				A289DB2B18F09A43001D28EA /* MHListener.h */,
 				A289DB2C18F09A43001D28EA /* MHListener.m */,
+				A289DBF118F0F431001D28EA /* MHGetPlaylists.h */,
+				A289DBF218F0F431001D28EA /* MHGetPlaylists.m */,
+				A289DBFA18F13C74001D28EA /* MHAddToPlaylist.h */,
+				A289DBFB18F13C74001D28EA /* MHAddToPlaylist.m */,
 				A289DAF918F0857E001D28EA /* MainMenu.xib */,
 				A289DAFC18F0857E001D28EA /* Images.xcassets */,
 				A289DAEB18F0857E001D28EA /* Supporting Files */,
@@ -288,6 +309,8 @@
 		A289DB3918F0AA56001D28EA /* scripts */ = {
 			isa = PBXGroup;
 			children = (
+				A289DBF718F0F55B001D28EA /* api.py */,
+				A289DBF418F0F533001D28EA /* playlists.py */,
 				A289DB3A18F0AA56001D28EA /* listener.py */,
 				A289DB3B18F0AA56001D28EA /* lookup.py */,
 				A289DB3C18F0AA56001D28EA /* record.sh */,
@@ -531,8 +554,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A289DAF118F0857E001D28EA /* main.m in Sources */,
+				A289DBFC18F13C74001D28EA /* MHAddToPlaylist.m in Sources */,
+				A289DBF318F0F431001D28EA /* MHGetPlaylists.m in Sources */,
 				A289DAF818F0857E001D28EA /* MHAppDelegate.m in Sources */,
 				A289DB2D18F09A43001D28EA /* MHListener.m in Sources */,
+				A289DBF018F0EFD6001D28EA /* MHTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

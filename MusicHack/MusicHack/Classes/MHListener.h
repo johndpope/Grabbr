@@ -7,11 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MHTask.h"
 
-typedef void (^TaskCallback)(NSString *);
-
-@interface MHListener : NSObject
-
-+ (MHListener *)launchWithSelector:(TaskCallback)callback;
+@interface MHListener : MHTask
 
 @end

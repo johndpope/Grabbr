@@ -13,6 +13,7 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="MHAppDelegate">
             <connections>
+                <outlet property="count" destination="wkC-Ci-Da9" id="4fK-Lp-T6T"/>
                 <outlet property="statusMenu" destination="u08-SL-cy0" id="gag-ln-e2o"/>
                 <outlet property="title" destination="SjO-R0-oDK" id="tEZ-xg-aRh"/>
             </connections>
@@ -679,59 +680,6 @@
                 <menuItem title="Add to playlist:" enabled="NO" id="FgM-k9-Kyf">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
-                <menuItem title="    Jazz" id="Okb-Cf-MJw">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-                <menuItem title="    Trip Hop" id="XXv-nM-I4X">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-                <menuItem title="    Urban" id="J8M-oE-yRo">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-                <menuItem title="    More" id="2HS-cM-dpV">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="    More" id="kBe-wl-oz2">
-                        <items>
-                            <menuItem title="About Application" id="MGU-i0-bbQ">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="7Rl-Qw-AeS"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="dgB-2n-zON"/>
-                            <menuItem title="Preferences…" keyEquivalent="," id="scH-nZ-Btk"/>
-                            <menuItem isSeparatorItem="YES" id="PNf-8V-DCi"/>
-                            <menuItem title="Services" id="wcM-m3-B9H">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Services" systemMenu="services" id="SXV-m5-DJP"/>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="yGT-ab-z89"/>
-                            <menuItem title="Hide Application" keyEquivalent="h" id="Oev-Xv-Brt">
-                                <connections>
-                                    <action selector="hide:" target="-1" id="weS-I9-os9"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Hide Others" keyEquivalent="h" id="DRC-oS-NlF">
-                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-                                <connections>
-                                    <action selector="hideOtherApplications:" target="-1" id="Vfj-M1-4VK"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Show All" id="Fmm-Jb-jFU">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="unhideAllApplications:" target="-1" id="Rqy-7H-rsH"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="mto-mr-eX0"/>
-                            <menuItem title="Quit Application" keyEquivalent="q" id="oV0-8v-NIu">
-                                <connections>
-                                    <action selector="terminate:" target="-1" id="DVf-CY-jXf"/>
-                                </connections>
-                            </menuItem>
-                        </items>
-                    </menu>
-                </menuItem>
                 <menuItem title="    (3 playlists)" enabled="NO" id="wkC-Ci-Da9">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
@@ -745,6 +693,9 @@
                 </menuItem>
                 <menuItem title="Quit" id="Syi-17-tXF">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="terminate:" target="-3" id="0Eh-5d-OKa"/>
+                    </connections>
                 </menuItem>
             </items>
         </menu>

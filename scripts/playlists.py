@@ -3,7 +3,7 @@ import sys
 import json
 
 def getUserPlaylists():
-	token = open('../auth.file', 'r').read()
+	token = open('/tmp/auth.token', 'r').read()
 	playlists = api.requestAPI(token, 'user', 'me', 'playlists')
 	if 'data' in playlists:
 		return playlists["data"]
@@ -15,7 +15,7 @@ def compareStrings(s1, s2):
 	return False
 
 def addTrackToPlaylist(playlist, artist, title):
-	token = open('../auth.file', 'r').read()
+	token = open('/tmp/auth.token', 'r').read()
 	search = api.searchAPI(token, artist + ' ' + title)
 	if "error" in search or int(search["total"]) == 0:
 		return None
@@ -29,13 +29,13 @@ def addTrackToPlaylist(playlist, artist, title):
 		   toAdd = entry
 		   break
 	if toAdd == None:
-		return None
+		return {"error":"No match found"}
 	return api.addTrackToPlaylist(token, playlist, toAdd["id"])
 
 
 if __name__ == "__main__":
 	if len(sys.argv) < 2:
-		print "You must provide arguments."
+		print {"error":"You must provide arguments."}
 		sys.exit()
 	if sys.argv[1] == "get":
 		playlists = getUserPlaylists()
@@ -45,7 +45,7 @@ if __name__ == "__main__":
 			print json.dumps(playlists)
 	elif sys.argv[1] == "add":
 		if len(sys.argv) < 5:
-			print "You must provide playlist, artist and album"
+			print {"error":"You must provide playlist, artist and album."}
 			sys.exit()
 		add = addTrackToPlaylist(sys.argv[2], sys.argv[3], sys.argv[4])
 		if add == None:

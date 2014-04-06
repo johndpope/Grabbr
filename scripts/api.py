@@ -13,7 +13,7 @@ def searchAPI(token, query):
 	params = {'output':'json', 'access_token': token}
 	url = "http://api.deezer.com/search?q=" + query
 	r = requests.get(url, params=params)
-	print r.url
+	# print r.url
 	return r.json()
 
 def addTrackToPlaylist(token, playlist, track):

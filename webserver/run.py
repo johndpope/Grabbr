@@ -39,7 +39,7 @@ def auth():
             r = parse_qs(r)
             auth_token = r["access_token"][0]
             auth_expire = int(r["expires"][0])
-            file = open("../auth.file", "w")
+            file = open("/tmp/auth.token", "w")
             file.write(auth_token)
 
     elif 'error_reason' in request.args:

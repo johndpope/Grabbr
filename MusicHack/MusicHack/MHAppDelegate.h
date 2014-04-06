@@ -8,15 +8,22 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MHListener.h"
+#import "MHGetPlaylists.h"
+#import "MHAddToPlaylist.h"
 
 @interface MHAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (nonatomic, strong) IBOutlet NSMenu       *statusMenu;
 @property (nonatomic, strong) IBOutlet NSMenuItem   *title;
+@property (nonatomic, strong) IBOutlet NSMenuItem   *count;
 @property (nonatomic, strong) NSStatusItem          *statusItem;
 @property (nonatomic, strong) NSTimer               *animationTimer;
 
-@property (nonatomic, strong) MHListener            *listenerTask;
+@property (nonatomic, strong) NSDictionary          *currentInfo;
+@property (nonatomic, strong) NSArray               *playlists;
+@property (nonatomic, strong) MHTask                *listenerTask;
+@property (nonatomic, strong) MHTask                *getPlaylistTask;
+@property (nonatomic, strong) MHTask                *addToPlaylistTask;
 
 @property (nonatomic, assign) NSInteger             currentFrame;
 @property (nonatomic, assign) NSInteger             totalFrames;
