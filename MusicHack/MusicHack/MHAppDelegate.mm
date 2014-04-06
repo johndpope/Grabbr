@@ -94,7 +94,7 @@
         self.addToPlaylistTask = [MHAddToPlaylist launchWithSelector:^(NSDictionary *data) {
             NSLog(@"ADD result: %@", data);
             if (data[@"error"] == nil) {
-                [self notification:@"Music Hack"
+                [self notification:@"Grabbr"
                               text:[NSString stringWithFormat:@"'%@ - %@' has been added to your playlist", self.currentInfo[@"artist"][@"name"], self.currentInfo[@"song"][@"title"]]];
             }
             self.addToPlaylistTask = nil;
