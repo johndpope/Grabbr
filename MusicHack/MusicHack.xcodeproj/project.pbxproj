@@ -13,7 +13,6 @@
 		A289DAF518F0857E001D28EA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A289DAF318F0857E001D28EA /* Credits.rtf */; };
 		A289DAF818F0857E001D28EA /* MHAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = A289DAF718F0857E001D28EA /* MHAppDelegate.mm */; };
 		A289DAFB18F0857E001D28EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A289DAF918F0857E001D28EA /* MainMenu.xib */; };
-		A289DAFD18F0857E001D28EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A289DAFC18F0857E001D28EA /* Images.xcassets */; };
 		A289DB0418F0857E001D28EA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DB0318F0857E001D28EA /* XCTest.framework */; };
 		A289DB0518F0857E001D28EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DAE418F0857E001D28EA /* Cocoa.framework */; };
 		A289DB0D18F0857E001D28EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A289DB0B18F0857E001D28EA /* InfoPlist.strings */; };
@@ -50,6 +49,7 @@
 		A289DC1A18F15DE7001D28EA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DC1918F15DE7001D28EA /* AudioToolbox.framework */; };
 		A289DC1C18F15DEE001D28EA /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DC1B18F15DEE001D28EA /* CoreAudio.framework */; };
 		A289DC2418F15FB4001D28EA /* CARingBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A289DC2218F15FB4001D28EA /* CARingBuffer.cpp */; };
+		A289DC2618F16564001D28EA /* appIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A289DC2518F16564001D28EA /* appIcon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +104,6 @@
 		A289DAF618F0857E001D28EA /* MHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHAppDelegate.h; sourceTree = "<group>"; };
 		A289DAF718F0857E001D28EA /* MHAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MHAppDelegate.mm; sourceTree = "<group>"; };
 		A289DAFA18F0857E001D28EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		A289DAFC18F0857E001D28EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A289DB0218F0857E001D28EA /* MusicHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A289DB0318F0857E001D28EA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A289DB0A18F0857E001D28EA /* MusicHackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicHackTests-Info.plist"; sourceTree = "<group>"; };
@@ -201,6 +200,7 @@
 		A289DC2118F15FB4001D28EA /* CABitOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABitOperations.h; sourceTree = "<group>"; };
 		A289DC2218F15FB4001D28EA /* CARingBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CARingBuffer.cpp; sourceTree = "<group>"; };
 		A289DC2318F15FB4001D28EA /* CARingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARingBuffer.h; sourceTree = "<group>"; };
+		A289DC2518F16564001D28EA /* appIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appIcon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,7 +289,6 @@
 				A289DBFA18F13C74001D28EA /* MHAddToPlaylist.h */,
 				A289DBFB18F13C74001D28EA /* MHAddToPlaylist.m */,
 				A289DAF918F0857E001D28EA /* MainMenu.xib */,
-				A289DAFC18F0857E001D28EA /* Images.xcassets */,
 				A289DAEB18F0857E001D28EA /* Supporting Files */,
 			);
 			path = MusicHack;
@@ -328,6 +327,7 @@
 		A289DB1818F090B2001D28EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A289DC2518F16564001D28EA /* appIcon.icns */,
 				A289DBA518F0AC98001D28EA /* echoprint-codegen */,
 				A289DB3918F0AA56001D28EA /* scripts */,
 				A289DB1918F090B2001D28EA /* menuIcon.tiff */,
@@ -596,13 +596,13 @@
 			files = (
 				A289DBED18F0AFEB001D28EA /* menuIcon0.tiff in Resources */,
 				A289DAEF18F0857E001D28EA /* InfoPlist.strings in Resources */,
-				A289DAFD18F0857E001D28EA /* Images.xcassets in Resources */,
 				A289DAF518F0857E001D28EA /* Credits.rtf in Resources */,
 				A289DB2A18F090B2001D28EA /* menuIcon7.tiff in Resources */,
 				A289DB2218F090B2001D28EA /* menuIcon.tiff in Resources */,
 				A289DAFB18F0857E001D28EA /* MainMenu.xib in Resources */,
 				A289DB2918F090B2001D28EA /* menuIcon6.tiff in Resources */,
 				A289DB2718F090B2001D28EA /* menuIcon4.tiff in Resources */,
+				A289DC2618F16564001D28EA /* appIcon.icns in Resources */,
 				A289DB2518F090B2001D28EA /* menuIcon2.tiff in Resources */,
 				A289DB2418F090B2001D28EA /* menuIcon1.tiff in Resources */,
 				A289DB2818F090B2001D28EA /* menuIcon5.tiff in Resources */,
@@ -766,7 +766,6 @@
 		A289DB1318F0857E001D28EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MusicHack/MusicHack-Prefix.pch";
@@ -788,7 +787,6 @@
 		A289DB1418F0857E001D28EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MusicHack/MusicHack-Prefix.pch";
