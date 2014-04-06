@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#include "MHAudio.hpp"
 #import "MHListener.h"
 #import "MHGetPlaylists.h"
 #import "MHAddToPlaylist.h"
@@ -19,6 +20,8 @@
 @property (nonatomic, strong) IBOutlet NSMenuItem   *count;
 @property (nonatomic, strong) NSStatusItem          *statusItem;
 @property (nonatomic, strong) NSTimer               *animationTimer;
+
+@property (nonatomic, strong) MHAudio               *audio;
 
 @property (nonatomic, strong) NSDictionary          *currentInfo;
 @property (nonatomic, strong) NSArray               *playlists;

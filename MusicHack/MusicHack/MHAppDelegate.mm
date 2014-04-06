@@ -15,6 +15,7 @@
     self.totalFrames = 8;
     self.animationTimer = nil;
     self.listenerTask = nil;
+    self.audio = [[MHAudio alloc] init];
     return self;
 }
 
@@ -31,6 +32,8 @@
     NSImage *image = [NSImage imageNamed:@"menuIcon"];
     [image setTemplate:YES];
     [self.statusItem setImage:image];
+    
+    [self.audio initConnections];
     
     [self getPlaylist];
     [self listen:self];
@@ -121,6 +124,11 @@
             [self performSelector:@selector(listen:) withObject:nil afterDelay:5];
         }];
     }
+}
+
+- (IBAction)doQuit {
+    [self.audio cleanupOnBeforeQuit];
+    [NSApp terminate:nil];
 }
 
 @end

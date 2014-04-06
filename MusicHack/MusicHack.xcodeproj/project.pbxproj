@@ -11,7 +11,7 @@
 		A289DAEF18F0857E001D28EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A289DAED18F0857E001D28EA /* InfoPlist.strings */; };
 		A289DAF118F0857E001D28EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A289DAF018F0857E001D28EA /* main.m */; };
 		A289DAF518F0857E001D28EA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A289DAF318F0857E001D28EA /* Credits.rtf */; };
-		A289DAF818F0857E001D28EA /* MHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A289DAF718F0857E001D28EA /* MHAppDelegate.m */; };
+		A289DAF818F0857E001D28EA /* MHAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = A289DAF718F0857E001D28EA /* MHAppDelegate.mm */; };
 		A289DAFB18F0857E001D28EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A289DAF918F0857E001D28EA /* MainMenu.xib */; };
 		A289DAFD18F0857E001D28EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A289DAFC18F0857E001D28EA /* Images.xcassets */; };
 		A289DB0418F0857E001D28EA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DB0318F0857E001D28EA /* XCTest.framework */; };
@@ -40,6 +40,16 @@
 		A289DBF618F0F543001D28EA /* playlists.py in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DBF418F0F533001D28EA /* playlists.py */; };
 		A289DBF918F0F561001D28EA /* api.py in CopyFiles */ = {isa = PBXBuildFile; fileRef = A289DBF718F0F55B001D28EA /* api.py */; };
 		A289DBFC18F13C74001D28EA /* MHAddToPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = A289DBFB18F13C74001D28EA /* MHAddToPlaylist.m */; };
+		A289DBFF18F15B1D001D28EA /* MHAudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = A289DBFE18F15B1D001D28EA /* MHAudio.mm */; };
+		A289DC0E18F15D8C001D28EA /* AudioDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A289DC0118F15D8C001D28EA /* AudioDevice.cpp */; };
+		A289DC0F18F15D8C001D28EA /* AudioTee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A289DC0318F15D8C001D28EA /* AudioTee.cpp */; };
+		A289DC1118F15D8C001D28EA /* WavFileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A289DC0718F15D8C001D28EA /* WavFileUtils.cpp */; };
+		A289DC1518F15DC7001D28EA /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DAE718F0857E001D28EA /* AppKit.framework */; };
+		A289DC1718F15DD0001D28EA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DC1618F15DD0001D28EA /* IOKit.framework */; };
+		A289DC1818F15DD6001D28EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DAE918F0857E001D28EA /* Foundation.framework */; };
+		A289DC1A18F15DE7001D28EA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DC1918F15DE7001D28EA /* AudioToolbox.framework */; };
+		A289DC1C18F15DEE001D28EA /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DC1B18F15DEE001D28EA /* CoreAudio.framework */; };
+		A289DC2418F15FB4001D28EA /* CARingBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A289DC2218F15FB4001D28EA /* CARingBuffer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +102,7 @@
 		A289DAF218F0857E001D28EA /* MusicHack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicHack-Prefix.pch"; sourceTree = "<group>"; };
 		A289DAF418F0857E001D28EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		A289DAF618F0857E001D28EA /* MHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHAppDelegate.h; sourceTree = "<group>"; };
-		A289DAF718F0857E001D28EA /* MHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHAppDelegate.m; sourceTree = "<group>"; };
+		A289DAF718F0857E001D28EA /* MHAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MHAppDelegate.mm; sourceTree = "<group>"; };
 		A289DAFA18F0857E001D28EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A289DAFC18F0857E001D28EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A289DB0218F0857E001D28EA /* MusicHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +185,22 @@
 		A289DBF718F0F55B001D28EA /* api.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = api.py; sourceTree = "<group>"; };
 		A289DBFA18F13C74001D28EA /* MHAddToPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHAddToPlaylist.h; path = Classes/MHAddToPlaylist.h; sourceTree = "<group>"; };
 		A289DBFB18F13C74001D28EA /* MHAddToPlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHAddToPlaylist.m; path = Classes/MHAddToPlaylist.m; sourceTree = "<group>"; };
+		A289DBFD18F15B1D001D28EA /* MHAudio.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MHAudio.hpp; sourceTree = "<group>"; };
+		A289DBFE18F15B1D001D28EA /* MHAudio.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MHAudio.mm; sourceTree = "<group>"; };
+		A289DC0118F15D8C001D28EA /* AudioDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AudioDevice.cpp; path = Classes/AudioDevice.cpp; sourceTree = "<group>"; };
+		A289DC0218F15D8C001D28EA /* AudioDevice.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AudioDevice.hpp; path = Classes/AudioDevice.hpp; sourceTree = "<group>"; };
+		A289DC0318F15D8C001D28EA /* AudioTee.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AudioTee.cpp; path = Classes/AudioTee.cpp; sourceTree = "<group>"; };
+		A289DC0418F15D8C001D28EA /* AudioTee.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AudioTee.hpp; path = Classes/AudioTee.hpp; sourceTree = "<group>"; };
+		A289DC0718F15D8C001D28EA /* WavFileUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WavFileUtils.cpp; path = Classes/WavFileUtils.cpp; sourceTree = "<group>"; };
+		A289DC0818F15D8C001D28EA /* WavFileUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = WavFileUtils.hpp; path = Classes/WavFileUtils.hpp; sourceTree = "<group>"; };
+		A289DC1618F15DD0001D28EA /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		A289DC1918F15DE7001D28EA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A289DC1B18F15DEE001D28EA /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		A289DC1F18F15FB4001D28EA /* CAAtomic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAtomic.h; sourceTree = "<group>"; };
+		A289DC2018F15FB4001D28EA /* CAAutoDisposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAutoDisposer.h; sourceTree = "<group>"; };
+		A289DC2118F15FB4001D28EA /* CABitOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABitOperations.h; sourceTree = "<group>"; };
+		A289DC2218F15FB4001D28EA /* CARingBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CARingBuffer.cpp; sourceTree = "<group>"; };
+		A289DC2318F15FB4001D28EA /* CARingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARingBuffer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +208,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A289DC1C18F15DEE001D28EA /* CoreAudio.framework in Frameworks */,
+				A289DC1A18F15DE7001D28EA /* AudioToolbox.framework in Frameworks */,
+				A289DC1818F15DD6001D28EA /* Foundation.framework in Frameworks */,
+				A289DC1718F15DD0001D28EA /* IOKit.framework in Frameworks */,
+				A289DC1518F15DC7001D28EA /* AppKit.framework in Frameworks */,
 				A289DAE518F0857E001D28EA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +251,9 @@
 		A289DAE318F0857E001D28EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A289DC1B18F15DEE001D28EA /* CoreAudio.framework */,
+				A289DC1918F15DE7001D28EA /* AudioToolbox.framework */,
+				A289DC1618F15DD0001D28EA /* IOKit.framework */,
 				A289DAE418F0857E001D28EA /* Cocoa.framework */,
 				A289DB0318F0857E001D28EA /* XCTest.framework */,
 				A289DAE618F0857E001D28EA /* Other Frameworks */,
@@ -240,9 +274,12 @@
 		A289DAEA18F0857E001D28EA /* MusicHack */ = {
 			isa = PBXGroup;
 			children = (
+				A289DC0018F15D7B001D28EA /* Audio */,
 				A289DB1818F090B2001D28EA /* Resources */,
 				A289DAF618F0857E001D28EA /* MHAppDelegate.h */,
-				A289DAF718F0857E001D28EA /* MHAppDelegate.m */,
+				A289DAF718F0857E001D28EA /* MHAppDelegate.mm */,
+				A289DBFD18F15B1D001D28EA /* MHAudio.hpp */,
+				A289DBFE18F15B1D001D28EA /* MHAudio.mm */,
 				A289DBEE18F0EFD6001D28EA /* MHTask.h */,
 				A289DBEF18F0EFD6001D28EA /* MHTask.m */,
 				A289DB2B18F09A43001D28EA /* MHListener.h */,
@@ -428,6 +465,41 @@
 			path = windows;
 			sourceTree = "<group>";
 		};
+		A289DC0018F15D7B001D28EA /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				A289DC1D18F15FB4001D28EA /* CoreAudio */,
+				A289DC0118F15D8C001D28EA /* AudioDevice.cpp */,
+				A289DC0218F15D8C001D28EA /* AudioDevice.hpp */,
+				A289DC0318F15D8C001D28EA /* AudioTee.cpp */,
+				A289DC0418F15D8C001D28EA /* AudioTee.hpp */,
+				A289DC0718F15D8C001D28EA /* WavFileUtils.cpp */,
+				A289DC0818F15D8C001D28EA /* WavFileUtils.hpp */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		A289DC1D18F15FB4001D28EA /* CoreAudio */ = {
+			isa = PBXGroup;
+			children = (
+				A289DC1E18F15FB4001D28EA /* PublicUtility */,
+			);
+			name = CoreAudio;
+			path = Classes/CoreAudio;
+			sourceTree = "<group>";
+		};
+		A289DC1E18F15FB4001D28EA /* PublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				A289DC1F18F15FB4001D28EA /* CAAtomic.h */,
+				A289DC2018F15FB4001D28EA /* CAAutoDisposer.h */,
+				A289DC2118F15FB4001D28EA /* CABitOperations.h */,
+				A289DC2218F15FB4001D28EA /* CARingBuffer.cpp */,
+				A289DC2318F15FB4001D28EA /* CARingBuffer.h */,
+			);
+			path = PublicUtility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -553,10 +625,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A289DC0F18F15D8C001D28EA /* AudioTee.cpp in Sources */,
 				A289DAF118F0857E001D28EA /* main.m in Sources */,
+				A289DC1118F15D8C001D28EA /* WavFileUtils.cpp in Sources */,
 				A289DBFC18F13C74001D28EA /* MHAddToPlaylist.m in Sources */,
+				A289DC0E18F15D8C001D28EA /* AudioDevice.cpp in Sources */,
+				A289DBFF18F15B1D001D28EA /* MHAudio.mm in Sources */,
 				A289DBF318F0F431001D28EA /* MHGetPlaylists.m in Sources */,
-				A289DAF818F0857E001D28EA /* MHAppDelegate.m in Sources */,
+				A289DAF818F0857E001D28EA /* MHAppDelegate.mm in Sources */,
+				A289DC2418F15FB4001D28EA /* CARingBuffer.cpp in Sources */,
 				A289DB2D18F09A43001D28EA /* MHListener.m in Sources */,
 				A289DBF018F0EFD6001D28EA /* MHTask.m in Sources */,
 			);
@@ -699,6 +776,11 @@
 					"/Users/teos/Dev/OSX/music_hack/echoprint-codegen/src",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -716,6 +798,11 @@
 					"/Users/teos/Dev/OSX/music_hack/echoprint-codegen/src",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
