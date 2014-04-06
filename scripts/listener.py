@@ -29,7 +29,7 @@ while last_verified == None and i > 0:
 
 			print result
 			# print "New song playing: ", result
-			os.popen('osascript -e \'display notification "%s" with title "%s"\'' % (data["song"]["title"].replace("'", " "), data["artist"]["name"].replace("'", " ")))
+			# os.popen('osascript -e \'display notification "%s" with title "%s"\'' % (data["song"]["title"].replace("'", " "), data["artist"]["name"].replace("'", " ")))
 		last_id = data["song"]["id"]
 
 if last_verified == None:

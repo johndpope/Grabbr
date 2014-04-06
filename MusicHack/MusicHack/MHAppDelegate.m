@@ -72,6 +72,15 @@
 
 #pragma mark - Action methods
 
+- (void)notification:(NSString *)title text:(NSString *)text {
+    NSUserNotification *notification = [[NSUserNotification alloc] init];
+    notification.title = title;
+    notification.informativeText = text;
+    notification.soundName = nil;
+    
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+}
+
 - (IBAction)addToPlaylist:(NSMenuItem *)sender {
     NSLog(@"Add to playlist (%ld)", sender.tag);
     if (self.addToPlaylistTask == nil && self.currentInfo != nil) {
@@ -80,6 +89,10 @@
         }]].lastObject;
         self.addToPlaylistTask = [MHAddToPlaylist launchWithSelector:^(NSDictionary *data) {
             NSLog(@"ADD result: %@", data);
+            if (data[@"error"] == nil) {
+                [self notification:@"Music Hack"
+                              text:[NSString stringWithFormat:@"'%@ - %@' has been added to your playlist", self.currentInfo[@"artist"][@"name"], self.currentInfo[@"song"][@"title"]]];
+            }
             self.addToPlaylistTask = nil;
         } identifier:[p[@"id"] stringValue] artist:self.currentInfo[@"artist"][@"name"] song:self.currentInfo[@"song"][@"title"]];
     }
@@ -93,8 +106,12 @@
         [self startAnimatingStatusBarIcon];
         self.listenerTask = [MHListener launchWithSelector:^(NSDictionary *data) {
             NSLog(@"Data: %@", data);
-            self.currentInfo = data;
-            self.title.title = self.currentInfo[@"song"] ? self.currentInfo[@"song"][@"title"] : @"No match found";
+            if (![self.currentInfo[@"song"][@"id"] isEqualToString:data[@"song"][@"id"]]) {
+                self.currentInfo = data;
+                [self notification:self.currentInfo[@"artist"][@"name"]
+                              text:self.currentInfo[@"song"][@"title"]];
+            }
+            self.title.title = self.currentInfo[@"song"] ? [NSString stringWithFormat:@"%@ - %@", self.currentInfo[@"artist"][@"name"], self.currentInfo[@"song"][@"title"]] : @"No match found";
             
             NSLog(@"Listening just finished");
             [self stopAnimatingStatusBarIcon];
