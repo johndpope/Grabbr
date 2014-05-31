@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5053"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -22,11 +22,11 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="MusicHack" id="1Xt-HY-uBw">
+                <menuItem title="Grabbr" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="MusicHack" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="Grabbr" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="About MusicHack" id="5kV-Vb-QxS">
+                            <menuItem title="About Grabbr" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
@@ -40,7 +40,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                            <menuItem title="Hide MusicHack" keyEquivalent="h" id="Olw-nP-bQN">
+                            <menuItem title="Hide Grabbr" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
                                     <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
                                 </connections>
@@ -58,7 +58,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit MusicHack" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit Grabbr" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -659,7 +659,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                         <items>
-                            <menuItem title="MusicHack Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                            <menuItem title="Grabbr Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
                                 </connections>
@@ -671,16 +671,12 @@
         </menu>
         <menu id="u08-SL-cy0">
             <items>
-                <menuItem title="Currently playing:" enabled="NO" id="SjO-R0-oDK">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
                 <menuItem title="   Beastie Boys - The Move" id="a7m-Mz-ebf">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="listen:" target="Voe-Tx-rLC" id="hOc-Y3-7p1"/>
                     </connections>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="yjI-vb-cW3"/>
                 <menuItem title="Add to playlist:" enabled="NO" id="FgM-k9-Kyf">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
@@ -692,13 +688,13 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="uyd-Zz-mkG"/>
-                <menuItem title="About" id="J26-H8-2f7">
+                <menuItem title="About" hidden="YES" id="J26-H8-2f7">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem title="Quit" id="Syi-17-tXF">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="terminate:" target="-3" id="0Eh-5d-OKa"/>
+                        <action selector="terminate:" target="-3" id="fRr-Aw-Dbi"/>
                     </connections>
                 </menuItem>
             </items>

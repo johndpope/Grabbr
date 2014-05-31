@@ -1,6 +1,6 @@
 //
 //  MHAppDelegate.h
-//  MusicHack
+//  Grabbr
 //
 //  Created by Theo LUBERT on 4/5/14.
 //  Copyright (c) 2014 Theo Lubert. All rights reserved.
@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #include "MHAudio.hpp"
 #import "MHListener.h"
+#import "MHSearch.h"
 #import "MHGetPlaylists.h"
 #import "MHAddToPlaylist.h"
 
@@ -28,6 +29,7 @@
 @property (nonatomic, strong) MHTask                *listenerTask;
 @property (nonatomic, strong) MHTask                *getPlaylistTask;
 @property (nonatomic, strong) MHTask                *addToPlaylistTask;
+@property (nonatomic, strong) MHTask                *searchTask;
 
 @property (nonatomic, assign) NSInteger             currentFrame;
 @property (nonatomic, assign) NSInteger             totalFrames;

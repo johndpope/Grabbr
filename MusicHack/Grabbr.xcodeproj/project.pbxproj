@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2823B8A1937555E0060029F /* MHPlaylistMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A2823B891937555E0060029F /* MHPlaylistMenuItem.m */; };
+		A2823B8E193757D50060029F /* MHPlaylistMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2823B8C193757D50060029F /* MHPlaylistMenuItemView.xib */; };
+		A2823B9019375D030060029F /* deezer-cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2823B8F19375D030060029F /* deezer-cover.jpg */; };
+		A2823B9319376C350060029F /* MHNibLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A2823B9219376C350060029F /* MHNibLoader.m */; };
+		A2823B9619376E730060029F /* MHAddToPlaylistItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2823B9519376E730060029F /* MHAddToPlaylistItemView.xib */; };
+		A2823B9919376F8E0060029F /* MHAddToPlaylistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A2823B9819376F8E0060029F /* MHAddToPlaylistItem.m */; };
+		A2823B9C193770270060029F /* MHCountItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A2823B9B193770270060029F /* MHCountItem.m */; };
+		A2823B9E193771580060029F /* MHCountItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2823B9D193771580060029F /* MHCountItemView.xib */; };
+		A2823BA11938AE430060029F /* MHSongItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A2823BA01938AE430060029F /* MHSongItem.m */; };
+		A2823BA51938AE770060029F /* MHSongItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2823BA41938AE770060029F /* MHSongItemView.xib */; };
+		A2823BA71938B6020060029F /* MHSeparatorItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2823BA61938B6020060029F /* MHSeparatorItemView.xib */; };
+		A2823BAA1938B66E0060029F /* MHSeparatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A2823BA91938B66E0060029F /* MHSeparatorItem.m */; };
+		A2823BAC1938B9E00060029F /* shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = A2823BAB1938B9E00060029F /* shadow.png */; };
+		A2823BAF1938CD940060029F /* MHMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A2823BAE1938CD940060029F /* MHMenuItem.m */; };
+		A2823BB11938D0CD0060029F /* deezer.png in Resources */ = {isa = PBXBuildFile; fileRef = A2823BB01938D0CD0060029F /* deezer.png */; };
+		A2823BB61938E6F60060029F /* MHSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = A2823BB51938E6F60060029F /* MHSearch.m */; };
+		A2823BB71938E7CA0060029F /* search.py in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2823BB21938E60F0060029F /* search.py */; };
 		A289DAE518F0857E001D28EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DAE418F0857E001D28EA /* Cocoa.framework */; };
 		A289DAEF18F0857E001D28EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A289DAED18F0857E001D28EA /* InfoPlist.strings */; };
 		A289DAF118F0857E001D28EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A289DAF018F0857E001D28EA /* main.m */; };
@@ -76,6 +93,7 @@
 			dstPath = "~/.music_hack";
 			dstSubfolderSpec = 0;
 			files = (
+				A2823BB71938E7CA0060029F /* search.py in CopyFiles */,
 				A289DBF918F0F561001D28EA /* api.py in CopyFiles */,
 				A289DBF618F0F543001D28EA /* playlists.py in CopyFiles */,
 				A289DBEB18F0AFC4001D28EA /* echoprint-codegen in CopyFiles */,
@@ -91,22 +109,47 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A289DAE118F0857E001D28EA /* MusicHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2823B881937555E0060029F /* MHPlaylistMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHPlaylistMenuItem.h; path = Classes/MHPlaylistMenuItem.h; sourceTree = "<group>"; };
+		A2823B891937555E0060029F /* MHPlaylistMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHPlaylistMenuItem.m; path = Classes/MHPlaylistMenuItem.m; sourceTree = "<group>"; };
+		A2823B8D193757D50060029F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MHPlaylistMenuItemView.xib; sourceTree = "<group>"; };
+		A2823B8F19375D030060029F /* deezer-cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "deezer-cover.jpg"; sourceTree = "<group>"; };
+		A2823B9119376C350060029F /* MHNibLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHNibLoader.h; path = Classes/MHNibLoader.h; sourceTree = "<group>"; };
+		A2823B9219376C350060029F /* MHNibLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHNibLoader.m; path = Classes/MHNibLoader.m; sourceTree = "<group>"; };
+		A2823B9519376E730060029F /* MHAddToPlaylistItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHAddToPlaylistItemView.xib; sourceTree = "<group>"; };
+		A2823B9719376F8E0060029F /* MHAddToPlaylistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHAddToPlaylistItem.h; path = Classes/MHAddToPlaylistItem.h; sourceTree = "<group>"; };
+		A2823B9819376F8E0060029F /* MHAddToPlaylistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHAddToPlaylistItem.m; path = Classes/MHAddToPlaylistItem.m; sourceTree = "<group>"; };
+		A2823B9A193770270060029F /* MHCountItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHCountItem.h; path = Classes/MHCountItem.h; sourceTree = "<group>"; };
+		A2823B9B193770270060029F /* MHCountItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHCountItem.m; path = Classes/MHCountItem.m; sourceTree = "<group>"; };
+		A2823B9D193771580060029F /* MHCountItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHCountItemView.xib; sourceTree = "<group>"; };
+		A2823B9F1938AE430060029F /* MHSongItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHSongItem.h; path = Classes/MHSongItem.h; sourceTree = "<group>"; };
+		A2823BA01938AE430060029F /* MHSongItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHSongItem.m; path = Classes/MHSongItem.m; sourceTree = "<group>"; };
+		A2823BA41938AE770060029F /* MHSongItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHSongItemView.xib; sourceTree = "<group>"; };
+		A2823BA61938B6020060029F /* MHSeparatorItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHSeparatorItemView.xib; sourceTree = "<group>"; };
+		A2823BA81938B66E0060029F /* MHSeparatorItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHSeparatorItem.h; path = Classes/MHSeparatorItem.h; sourceTree = "<group>"; };
+		A2823BA91938B66E0060029F /* MHSeparatorItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHSeparatorItem.m; path = Classes/MHSeparatorItem.m; sourceTree = "<group>"; };
+		A2823BAB1938B9E00060029F /* shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow.png; sourceTree = "<group>"; };
+		A2823BAD1938CD940060029F /* MHMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHMenuItem.h; path = Classes/MHMenuItem.h; sourceTree = "<group>"; };
+		A2823BAE1938CD940060029F /* MHMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHMenuItem.m; path = Classes/MHMenuItem.m; sourceTree = "<group>"; };
+		A2823BB01938D0CD0060029F /* deezer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deezer.png; sourceTree = "<group>"; };
+		A2823BB21938E60F0060029F /* search.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = search.py; sourceTree = "<group>"; };
+		A2823BB41938E6F60060029F /* MHSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHSearch.h; path = Classes/MHSearch.h; sourceTree = "<group>"; };
+		A2823BB51938E6F60060029F /* MHSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHSearch.m; path = Classes/MHSearch.m; sourceTree = "<group>"; };
+		A289DAE118F0857E001D28EA /* Grabbr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grabbr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A289DAE418F0857E001D28EA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A289DAE718F0857E001D28EA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		A289DAE818F0857E001D28EA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A289DAE918F0857E001D28EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		A289DAEC18F0857E001D28EA /* MusicHack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicHack-Info.plist"; sourceTree = "<group>"; };
+		A289DAEC18F0857E001D28EA /* Grabbr-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Grabbr-Info.plist"; sourceTree = "<group>"; };
 		A289DAEE18F0857E001D28EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A289DAF018F0857E001D28EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A289DAF218F0857E001D28EA /* MusicHack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicHack-Prefix.pch"; sourceTree = "<group>"; };
+		A289DAF218F0857E001D28EA /* Grabbr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Grabbr-Prefix.pch"; sourceTree = "<group>"; };
 		A289DAF418F0857E001D28EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		A289DAF618F0857E001D28EA /* MHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHAppDelegate.h; sourceTree = "<group>"; };
 		A289DAF718F0857E001D28EA /* MHAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MHAppDelegate.mm; sourceTree = "<group>"; };
 		A289DAFA18F0857E001D28EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		A289DB0218F0857E001D28EA /* MusicHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A289DB0218F0857E001D28EA /* GrabbrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrabbrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A289DB0318F0857E001D28EA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		A289DB0A18F0857E001D28EA /* MusicHackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicHackTests-Info.plist"; sourceTree = "<group>"; };
+		A289DB0A18F0857E001D28EA /* GrabbrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GrabbrTests-Info.plist"; sourceTree = "<group>"; };
 		A289DB0C18F0857E001D28EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A289DB0E18F0857E001D28EA /* MusicHackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicHackTests.m; sourceTree = "<group>"; };
 		A289DB1918F090B2001D28EA /* menuIcon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menuIcon.tiff; sourceTree = "<group>"; };
@@ -229,6 +272,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2823B9419376C460060029F /* Custom views */ = {
+			isa = PBXGroup;
+			children = (
+				A2823B9119376C350060029F /* MHNibLoader.h */,
+				A2823B9219376C350060029F /* MHNibLoader.m */,
+				A2823BAD1938CD940060029F /* MHMenuItem.h */,
+				A2823BAE1938CD940060029F /* MHMenuItem.m */,
+				A2823B881937555E0060029F /* MHPlaylistMenuItem.h */,
+				A2823B891937555E0060029F /* MHPlaylistMenuItem.m */,
+				A2823B9719376F8E0060029F /* MHAddToPlaylistItem.h */,
+				A2823B9819376F8E0060029F /* MHAddToPlaylistItem.m */,
+				A2823B9A193770270060029F /* MHCountItem.h */,
+				A2823B9B193770270060029F /* MHCountItem.m */,
+				A2823B9F1938AE430060029F /* MHSongItem.h */,
+				A2823BA01938AE430060029F /* MHSongItem.m */,
+				A2823BA81938B66E0060029F /* MHSeparatorItem.h */,
+				A2823BA91938B66E0060029F /* MHSeparatorItem.m */,
+			);
+			name = "Custom views";
+			sourceTree = "<group>";
+		};
 		A289DAD818F0857E001D28EA = {
 			isa = PBXGroup;
 			children = (
@@ -242,8 +306,8 @@
 		A289DAE218F0857E001D28EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A289DAE118F0857E001D28EA /* MusicHack.app */,
-				A289DB0218F0857E001D28EA /* MusicHackTests.xctest */,
+				A289DAE118F0857E001D28EA /* Grabbr.app */,
+				A289DB0218F0857E001D28EA /* GrabbrTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,6 +342,7 @@
 				A289DB1818F090B2001D28EA /* Resources */,
 				A289DAF618F0857E001D28EA /* MHAppDelegate.h */,
 				A289DAF718F0857E001D28EA /* MHAppDelegate.mm */,
+				A2823B9419376C460060029F /* Custom views */,
 				A289DBFD18F15B1D001D28EA /* MHAudio.hpp */,
 				A289DBFE18F15B1D001D28EA /* MHAudio.mm */,
 				A289DBEE18F0EFD6001D28EA /* MHTask.h */,
@@ -288,7 +353,14 @@
 				A289DBF218F0F431001D28EA /* MHGetPlaylists.m */,
 				A289DBFA18F13C74001D28EA /* MHAddToPlaylist.h */,
 				A289DBFB18F13C74001D28EA /* MHAddToPlaylist.m */,
+				A2823BB41938E6F60060029F /* MHSearch.h */,
+				A2823BB51938E6F60060029F /* MHSearch.m */,
 				A289DAF918F0857E001D28EA /* MainMenu.xib */,
+				A2823B8C193757D50060029F /* MHPlaylistMenuItemView.xib */,
+				A2823B9519376E730060029F /* MHAddToPlaylistItemView.xib */,
+				A2823B9D193771580060029F /* MHCountItemView.xib */,
+				A2823BA41938AE770060029F /* MHSongItemView.xib */,
+				A2823BA61938B6020060029F /* MHSeparatorItemView.xib */,
 				A289DAEB18F0857E001D28EA /* Supporting Files */,
 			);
 			path = MusicHack;
@@ -297,10 +369,10 @@
 		A289DAEB18F0857E001D28EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A289DAEC18F0857E001D28EA /* MusicHack-Info.plist */,
+				A289DAEC18F0857E001D28EA /* Grabbr-Info.plist */,
 				A289DAED18F0857E001D28EA /* InfoPlist.strings */,
 				A289DAF018F0857E001D28EA /* main.m */,
-				A289DAF218F0857E001D28EA /* MusicHack-Prefix.pch */,
+				A289DAF218F0857E001D28EA /* Grabbr-Prefix.pch */,
 				A289DAF318F0857E001D28EA /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -318,7 +390,7 @@
 		A289DB0918F0857E001D28EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A289DB0A18F0857E001D28EA /* MusicHackTests-Info.plist */,
+				A289DB0A18F0857E001D28EA /* GrabbrTests-Info.plist */,
 				A289DB0B18F0857E001D28EA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -327,6 +399,9 @@
 		A289DB1818F090B2001D28EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A2823BB01938D0CD0060029F /* deezer.png */,
+				A2823BAB1938B9E00060029F /* shadow.png */,
+				A2823B8F19375D030060029F /* deezer-cover.jpg */,
 				A289DC2518F16564001D28EA /* appIcon.icns */,
 				A289DBA518F0AC98001D28EA /* echoprint-codegen */,
 				A289DB3918F0AA56001D28EA /* scripts */,
@@ -347,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				A289DBF718F0F55B001D28EA /* api.py */,
+				A2823BB21938E60F0060029F /* search.py */,
 				A289DBF418F0F533001D28EA /* playlists.py */,
 				A289DB3A18F0AA56001D28EA /* listener.py */,
 				A289DB3B18F0AA56001D28EA /* lookup.py */,
@@ -503,9 +579,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A289DAE018F0857E001D28EA /* MusicHack */ = {
+		A289DAE018F0857E001D28EA /* Grabbr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A289DB1218F0857E001D28EA /* Build configuration list for PBXNativeTarget "MusicHack" */;
+			buildConfigurationList = A289DB1218F0857E001D28EA /* Build configuration list for PBXNativeTarget "Grabbr" */;
 			buildPhases = (
 				A289DADD18F0857E001D28EA /* Sources */,
 				A289DADE18F0857E001D28EA /* Frameworks */,
@@ -516,14 +592,14 @@
 			);
 			dependencies = (
 			);
-			name = MusicHack;
+			name = Grabbr;
 			productName = MusicHack;
-			productReference = A289DAE118F0857E001D28EA /* MusicHack.app */;
+			productReference = A289DAE118F0857E001D28EA /* Grabbr.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A289DB0118F0857E001D28EA /* MusicHackTests */ = {
+		A289DB0118F0857E001D28EA /* GrabbrTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A289DB1518F0857E001D28EA /* Build configuration list for PBXNativeTarget "MusicHackTests" */;
+			buildConfigurationList = A289DB1518F0857E001D28EA /* Build configuration list for PBXNativeTarget "GrabbrTests" */;
 			buildPhases = (
 				A289DAFE18F0857E001D28EA /* Sources */,
 				A289DAFF18F0857E001D28EA /* Frameworks */,
@@ -534,9 +610,9 @@
 			dependencies = (
 				A289DB0718F0857E001D28EA /* PBXTargetDependency */,
 			);
-			name = MusicHackTests;
+			name = GrabbrTests;
 			productName = MusicHackTests;
-			productReference = A289DB0218F0857E001D28EA /* MusicHackTests.xctest */;
+			productReference = A289DB0218F0857E001D28EA /* GrabbrTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -554,7 +630,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A289DADC18F0857E001D28EA /* Build configuration list for PBXProject "MusicHack" */;
+			buildConfigurationList = A289DADC18F0857E001D28EA /* Build configuration list for PBXProject "Grabbr" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -573,8 +649,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				A289DAE018F0857E001D28EA /* MusicHack */,
-				A289DB0118F0857E001D28EA /* MusicHackTests */,
+				A289DAE018F0857E001D28EA /* Grabbr */,
+				A289DB0118F0857E001D28EA /* GrabbrTests */,
 			);
 		};
 /* End PBXProject section */
@@ -595,8 +671,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A289DBED18F0AFEB001D28EA /* menuIcon0.tiff in Resources */,
+				A2823BA51938AE770060029F /* MHSongItemView.xib in Resources */,
 				A289DAEF18F0857E001D28EA /* InfoPlist.strings in Resources */,
 				A289DAF518F0857E001D28EA /* Credits.rtf in Resources */,
+				A2823B8E193757D50060029F /* MHPlaylistMenuItemView.xib in Resources */,
 				A289DB2A18F090B2001D28EA /* menuIcon7.tiff in Resources */,
 				A289DB2218F090B2001D28EA /* menuIcon.tiff in Resources */,
 				A289DAFB18F0857E001D28EA /* MainMenu.xib in Resources */,
@@ -605,7 +683,13 @@
 				A289DC2618F16564001D28EA /* appIcon.icns in Resources */,
 				A289DB2518F090B2001D28EA /* menuIcon2.tiff in Resources */,
 				A289DB2418F090B2001D28EA /* menuIcon1.tiff in Resources */,
+				A2823B9019375D030060029F /* deezer-cover.jpg in Resources */,
 				A289DB2818F090B2001D28EA /* menuIcon5.tiff in Resources */,
+				A2823BAC1938B9E00060029F /* shadow.png in Resources */,
+				A2823BA71938B6020060029F /* MHSeparatorItemView.xib in Resources */,
+				A2823BB11938D0CD0060029F /* deezer.png in Resources */,
+				A2823B9E193771580060029F /* MHCountItemView.xib in Resources */,
+				A2823B9619376E730060029F /* MHAddToPlaylistItemView.xib in Resources */,
 				A289DB2618F090B2001D28EA /* menuIcon3.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,15 +711,23 @@
 			files = (
 				A289DC0F18F15D8C001D28EA /* AudioTee.cpp in Sources */,
 				A289DAF118F0857E001D28EA /* main.m in Sources */,
+				A2823BA11938AE430060029F /* MHSongItem.m in Sources */,
+				A2823B9319376C350060029F /* MHNibLoader.m in Sources */,
+				A2823BAF1938CD940060029F /* MHMenuItem.m in Sources */,
 				A289DC1118F15D8C001D28EA /* WavFileUtils.cpp in Sources */,
 				A289DBFC18F13C74001D28EA /* MHAddToPlaylist.m in Sources */,
 				A289DC0E18F15D8C001D28EA /* AudioDevice.cpp in Sources */,
 				A289DBFF18F15B1D001D28EA /* MHAudio.mm in Sources */,
+				A2823BB61938E6F60060029F /* MHSearch.m in Sources */,
+				A2823B9C193770270060029F /* MHCountItem.m in Sources */,
 				A289DBF318F0F431001D28EA /* MHGetPlaylists.m in Sources */,
 				A289DAF818F0857E001D28EA /* MHAppDelegate.mm in Sources */,
 				A289DC2418F15FB4001D28EA /* CARingBuffer.cpp in Sources */,
 				A289DB2D18F09A43001D28EA /* MHListener.m in Sources */,
+				A2823B8A1937555E0060029F /* MHPlaylistMenuItem.m in Sources */,
 				A289DBF018F0EFD6001D28EA /* MHTask.m in Sources */,
+				A2823BAA1938B66E0060029F /* MHSeparatorItem.m in Sources */,
+				A2823B9919376F8E0060029F /* MHAddToPlaylistItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,12 +744,20 @@
 /* Begin PBXTargetDependency section */
 		A289DB0718F0857E001D28EA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A289DAE018F0857E001D28EA /* MusicHack */;
+			target = A289DAE018F0857E001D28EA /* Grabbr */;
 			targetProxy = A289DB0618F0857E001D28EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A2823B8C193757D50060029F /* MHPlaylistMenuItemView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2823B8D193757D50060029F /* Base */,
+			);
+			name = MHPlaylistMenuItemView.xib;
+			sourceTree = "<group>";
+		};
 		A289DAED18F0857E001D28EA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -768,13 +868,13 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MusicHack/MusicHack-Prefix.pch";
-				INFOPLIST_FILE = "MusicHack/MusicHack-Info.plist";
+				GCC_PREFIX_HEADER = "MusicHack/Grabbr-Prefix.pch";
+				INFOPLIST_FILE = "MusicHack/Grabbr-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/teos/Dev/OSX/music_hack/echoprint-codegen/src",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Grabbr;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -789,13 +889,13 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MusicHack/MusicHack-Prefix.pch";
-				INFOPLIST_FILE = "MusicHack/MusicHack-Info.plist";
+				GCC_PREFIX_HEADER = "MusicHack/Grabbr-Prefix.pch";
+				INFOPLIST_FILE = "MusicHack/Grabbr-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/teos/Dev/OSX/music_hack/echoprint-codegen/src",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Grabbr;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -820,8 +920,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "MusicHackTests/MusicHackTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "MusicHackTests/GrabbrTests-Info.plist";
+				PRODUCT_NAME = GrabbrTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -838,8 +938,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MusicHack/MusicHack-Prefix.pch";
-				INFOPLIST_FILE = "MusicHackTests/MusicHackTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "MusicHackTests/GrabbrTests-Info.plist";
+				PRODUCT_NAME = GrabbrTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -848,7 +948,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A289DADC18F0857E001D28EA /* Build configuration list for PBXProject "MusicHack" */ = {
+		A289DADC18F0857E001D28EA /* Build configuration list for PBXProject "Grabbr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A289DB1018F0857E001D28EA /* Debug */,
@@ -857,21 +957,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A289DB1218F0857E001D28EA /* Build configuration list for PBXNativeTarget "MusicHack" */ = {
+		A289DB1218F0857E001D28EA /* Build configuration list for PBXNativeTarget "Grabbr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A289DB1318F0857E001D28EA /* Debug */,
 				A289DB1418F0857E001D28EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		A289DB1518F0857E001D28EA /* Build configuration list for PBXNativeTarget "MusicHackTests" */ = {
+		A289DB1518F0857E001D28EA /* Build configuration list for PBXNativeTarget "GrabbrTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A289DB1618F0857E001D28EA /* Debug */,
 				A289DB1718F0857E001D28EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

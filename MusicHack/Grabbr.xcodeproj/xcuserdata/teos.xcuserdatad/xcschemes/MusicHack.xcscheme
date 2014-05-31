@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A289DAE018F0857E001D28EA"
-               BuildableName = "MusicHack.app"
-               BlueprintName = "MusicHack"
-               ReferencedContainer = "container:MusicHack.xcodeproj">
+               BuildableName = "Grabbr.app"
+               BlueprintName = "Grabbr"
+               ReferencedContainer = "container:Grabbr.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A289DB0118F0857E001D28EA"
-               BuildableName = "MusicHackTests.xctest"
-               BlueprintName = "MusicHackTests"
-               ReferencedContainer = "container:MusicHack.xcodeproj">
+               BuildableName = "GrabbrTests.xctest"
+               BlueprintName = "GrabbrTests"
+               ReferencedContainer = "container:Grabbr.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A289DAE018F0857E001D28EA"
-            BuildableName = "MusicHack.app"
-            BlueprintName = "MusicHack"
-            ReferencedContainer = "container:MusicHack.xcodeproj">
+            BuildableName = "Grabbr.app"
+            BlueprintName = "Grabbr"
+            ReferencedContainer = "container:Grabbr.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A289DAE018F0857E001D28EA"
-            BuildableName = "MusicHack.app"
-            BlueprintName = "MusicHack"
-            ReferencedContainer = "container:MusicHack.xcodeproj">
+            BuildableName = "Grabbr.app"
+            BlueprintName = "Grabbr"
+            ReferencedContainer = "container:Grabbr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A289DAE018F0857E001D28EA"
-            BuildableName = "MusicHack.app"
-            BlueprintName = "MusicHack"
-            ReferencedContainer = "container:MusicHack.xcodeproj">
+            BuildableName = "Grabbr.app"
+            BlueprintName = "Grabbr"
+            ReferencedContainer = "container:Grabbr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,12 +1,17 @@
 //
 //  MHAppDelegate.m
-//  MusicHack
+//  Grabbr
 //
 //  Created by Theo LUBERT on 4/5/14.
 //  Copyright (c) 2014 Theo Lubert. All rights reserved.
 //
 
 #import "MHAppDelegate.h"
+#import "MHPlaylistMenuItem.h"
+#import "MHAddToPlaylistItem.h"
+#import "MHSeparatorItem.h"
+#import "MHCountItem.h"
+#import "MHSongItem.h"
 
 @implementation MHAppDelegate
 
@@ -16,6 +21,7 @@
     self.animationTimer = nil;
     self.listenerTask = nil;
     self.audio = [[MHAudio alloc] init];
+    self.playlists = @[];
     return self;
 }
 
@@ -35,8 +41,31 @@
     
     [self.audio initConnections];
     
+    [self buildMenu];
     [self getPlaylist];
     [self listen:self];
+}
+
+- (void)buildMenu {
+    for (NSMenuItem *item in self.statusMenu.itemArray) {
+        if ([item isSeparatorItem]) {
+            [item setView:[MHSeparatorItem separator]];
+        }
+    }
+    
+    [self.title setView:[MHSongItem song:nil]];
+    [self.playlistSection setView:[MHAddToPlaylistItem addTo:@"Deezer"]];
+    for (NSInteger i=0, k=self.playlists.count; i<k; i++) {
+        NSDictionary *playlist = self.playlists[i];
+        NSInteger index = [self.statusMenu.itemArray indexOfObject:self.playlistSection] + 1;
+        NSString *title = [NSString stringWithFormat:@"   %@", playlist[@"title"]];
+        NSMenuItem *item = [self.statusMenu insertItemWithTitle:title action:@selector(addToPlaylist:) keyEquivalent:@"" atIndex:index];
+        [item setView: [MHPlaylistMenuItem playlist:playlist atIndex:i]];
+        [item setTarget:self];
+        [item setTag:[playlist[@"id"] integerValue]];
+    }
+    self.count.title = [NSString stringWithFormat:@"   (%ld playlists)", self.playlists.count];
+    [self.count setView:[MHCountItem count:self.playlists.count]];
 }
 
 - (void)getPlaylist {
@@ -46,14 +75,7 @@
             self.playlists = [data[@"array"] sortedArrayUsingComparator:^NSComparisonResult(NSDictionary *p1, NSDictionary *p2) {
                 return [(NSString *)p2[@"title"] compare:p1[@"title"]];
             }];
-            for (NSDictionary *playlist in self.playlists) {
-                NSInteger index = [self.statusMenu.itemArray indexOfObject:self.playlistSection] + 1;
-                NSString *title = [NSString stringWithFormat:@"   %@", playlist[@"title"]];
-                NSMenuItem *item = [self.statusMenu insertItemWithTitle:title action:@selector(addToPlaylist:) keyEquivalent:@"" atIndex:index];
-                [item setTarget:self];
-                [item setTag:[playlist[@"id"] integerValue]];
-            }
-            self.count.title = [NSString stringWithFormat:@"   (%ld playlists)", self.playlists.count];
+            [self buildMenu];
             self.getPlaylistTask = nil;
         }];
     }
@@ -102,32 +124,45 @@
     }
 }
 
+- (void)search:(NSDictionary *)song {
+    self.searchTask = [MHSearch launchWithSelector:^(NSDictionary *data) {
+        NSLog(@"Search: %@", data);
+        [(MHSongItem *)self.title.view setSong:data];
+        
+        [self notification:self.currentInfo[@"artist"][@"name"]
+                      text:self.currentInfo[@"song"][@"title"]];
+        
+        NSLog(@"Listening just finished");
+        [self stopAnimatingStatusBarIcon];
+        [self performSelector:@selector(listen:) withObject:nil afterDelay:0];
+    } artist:song[@"artist"][@"name"] song:song[@"song"][@"title"]];
+}
+
 - (IBAction)listen:(id)sender {
     if (self.listenerTask == nil) {
         if (sender) {
             self.title.title = @"   Listening...";
         }
         [self startAnimatingStatusBarIcon];
+        NSLog(@"Start listening");
         self.listenerTask = [MHListener launchWithSelector:^(NSDictionary *data) {
-            NSLog(@"Data: %@", data);
-            if (![self.currentInfo[@"song"][@"id"] isEqualToString:data[@"song"][@"id"]]) {
+            NSLog(@"Sotpped listening: %@", data);
+            if (data[@"song"][@"id"] && ![self.currentInfo[@"song"][@"id"] isEqualToString:data[@"song"][@"id"]]) {
                 self.currentInfo = data;
-                [self notification:self.currentInfo[@"artist"][@"name"]
-                              text:self.currentInfo[@"song"][@"title"]];
+                [self search:data];
             }
-            self.title.title = self.currentInfo[@"song"] ? [NSString stringWithFormat:@"   %@ - %@", self.currentInfo[@"artist"][@"name"], self.currentInfo[@"song"][@"title"]] : @"   No match found";
-            
-            NSLog(@"Listening just finished");
-            [self stopAnimatingStatusBarIcon];
             
             self.listenerTask = nil;
-            [self performSelector:@selector(listen:) withObject:nil afterDelay:5];
         }];
     }
 }
 
-- (IBAction)doQuit {
+- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
     [self.audio cleanupOnBeforeQuit];
+    return YES;
+}
+
+- (IBAction)doQuit {
     [NSApp terminate:nil];
 }
 

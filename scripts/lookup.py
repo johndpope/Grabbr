@@ -25,8 +25,8 @@ def lookup(file):
         # print "Got result:", result
         if len(result):
             print '{'
-            print ' "artist": { "name": "%s", "id": "%s" },' % (result[0].artist_name, result[0].artist_id)
-            print ' "song": { "title": "%s", "id": "%s" }' % (result[0].title, result[0].id)
+            print ' "artist": { "name": "%s", "id": "%s" },' % (result[0].artist_name.encode('utf-8'), result[0].artist_id)
+            print ' "song": { "title": "%s", "id": "%s" }' % (result[0].title.encode('utf-8'), result[0].id)
             print '}'
         else:
             print '{ "error": "No match. This track may not be in the database yet" }'

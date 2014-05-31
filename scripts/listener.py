@@ -5,7 +5,7 @@ import sys
 import signal
 import json
 
-FILE = "/tmp/audio.wav"
+FILE = "~/.music_hack/audio.wav"
 APP_KEY = "XEL1XZ9B6LIRBKVWP"
 DURATION = 15
 
@@ -16,10 +16,11 @@ while last_verified == None and i > 0:
 	i -= 1
 	os.popen("rm %s" % FILE)
 	os.popen("./timeout -s 15 -t %d ./record.sh 2>&1 >> /dev/null" % DURATION)
-	os.popen("sleep 1 && killall -9 sox")
+	os.popen("killall -9 sox")
 	
 	# print 'sleep 5 && export ECHO_NEST_API_KEY=%s && ./lookup.py %s' % (APP_KEY, FILE)
-	result = os.popen('sleep 5 && export ECHO_NEST_API_KEY=%s && ./lookup.py %s' % (APP_KEY, FILE)).read()
+	result = os.popen('export ECHO_NEST_API_KEY=%s && ./lookup.py %s' % (APP_KEY, FILE)).read()
+#	print result
 	data = json.loads(result)
 
 	# print data

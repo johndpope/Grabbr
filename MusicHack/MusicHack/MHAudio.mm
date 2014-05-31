@@ -1,6 +1,6 @@
 //
 //  MHAudio.mm
-//  MusicHack
+//  Grabbr
 //
 //  Created by Theo LUBERT on 4/6/14.
 //  Copyright (c) 2014 Theo Lubert. All rights reserved.
@@ -67,7 +67,7 @@ std::vector<Device> *mDevices;
 - (void)initConnections {
     [self rebuildDeviceList];
     for (std::vector<Device>::iterator i = mDevices->begin(); i != mDevices->end(); ++i) {
-        if (0 == strcmp("WavTap", (*i).mName)) mWavTapDeviceID = (*i).mID;
+        if (0 == strcmp("Grabbr", (*i).mName)) mWavTapDeviceID = (*i).mID;
     }
     
     Float32 maxVolume = 1.0;
