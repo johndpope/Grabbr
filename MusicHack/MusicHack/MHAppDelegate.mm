@@ -126,15 +126,18 @@
 
 - (void)search:(NSDictionary *)song {
     self.searchTask = [MHSearch launchWithSelector:^(NSDictionary *data) {
-        NSLog(@"Search: %@", data);
+//        NSLog(@"Search: %@", data);
         [(MHSongItem *)self.title.view setSong:data];
         
-        [self notification:self.currentInfo[@"artist"][@"name"]
-                      text:self.currentInfo[@"song"][@"title"]];
+        if (![self.currentInfo[@"song"][@"id"] isEqualToString:song[@"song"][@"id"]]) {
+            NSLog(@"Send notification");
+            self.currentInfo = song;
+            [self notification:self.currentInfo[@"artist"][@"name"]
+                          text:self.currentInfo[@"song"][@"title"]];
+        }
         
-        NSLog(@"Listening just finished");
         [self stopAnimatingStatusBarIcon];
-        [self performSelector:@selector(listen:) withObject:nil afterDelay:0];
+        [self performSelector:@selector(listen:) withObject:nil afterDelay:5];
     } artist:song[@"artist"][@"name"] song:song[@"song"][@"title"]];
 }
 
@@ -146,10 +149,11 @@
         [self startAnimatingStatusBarIcon];
         NSLog(@"Start listening");
         self.listenerTask = [MHListener launchWithSelector:^(NSDictionary *data) {
-            NSLog(@"Sotpped listening: %@", data);
-            if (data[@"song"][@"id"] && ![self.currentInfo[@"song"][@"id"] isEqualToString:data[@"song"][@"id"]]) {
-                self.currentInfo = data;
+            NSLog(@"Stopped listening: %@", data);
+            if (data[@"song"][@"id"]) {
                 [self search:data];
+            } else {
+                [self performSelector:@selector(listen:) withObject:nil afterDelay:0];
             }
             
             self.listenerTask = nil;
