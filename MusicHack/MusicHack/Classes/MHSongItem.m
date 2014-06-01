@@ -54,6 +54,19 @@
     [self setNeedsDisplay:YES];
 }
 
+- (void)drawImage:(NSImage *)img inRect:(NSRect)rect {
+    [img drawInRect:rect fromRect:(CGRect) {
+        .origin = (CGPoint) {
+            .x = 0,
+            .y = (img.size.height / 2) - (60 * (img.size.width / 250))
+        },
+        .size = (CGSize) {
+            .width = img.size.width,
+            .height = 60 * (img.size.width / 250)
+        }
+    } operation:NSCompositeSourceOver fraction:1];
+}
+
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
@@ -61,7 +74,11 @@
     fullBounds.size.height += 4;
     [[NSBezierPath bezierPathWithRect:fullBounds] setClip];
     
-    [self.picture drawInRect:(CGRect) {
+    NSImage *img = [NSImage imageNamed:@"cover.png"];
+    if (self.picture) {
+        img = self.picture;
+    }
+    [self drawImage:img inRect:(CGRect) {
         .origin = (CGPoint) {
             .x = 0,
             .y = 0
@@ -70,16 +87,7 @@
             .width = 250,
             .height = 64
         }
-    } fromRect:(CGRect) {
-        .origin = (CGPoint) {
-            .x = 0,
-            .y = (self.picture.size.height / 2) - (60 * (self.picture.size.width / 250))
-        },
-        .size = (CGSize) {
-            .width = self.picture.size.width,
-            .height = 60 * (self.picture.size.width / 250)
-        }
-    } operation:NSCompositeSourceOver fraction:1];
+    }];
     
     // Draw the shadow
     [[NSImage imageNamed:@"shadow.png"] drawInRect:(CGRect) {

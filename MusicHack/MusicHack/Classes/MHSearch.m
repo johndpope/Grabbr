@@ -20,11 +20,29 @@
                         artist:(NSString *)artist
                           song:(NSString *)song {
     MHSearch *task = (MHSearch *)[MHSearch launchWithSelector:callback];
-    task.artist = artist;
-    task.song = song;
+    task.artist = [task removeParentethis:artist];
+    task.song = [task removeParentethis:song];
+    
+    NSLog(@"%@ - %@", task.artist, task.song);
     
     [task launch];
     return task;
+}
+
+- (NSString *)removeParentethis:(NSString *)str {
+    NSInteger removing = 0;
+    NSMutableString *output = [@"" mutableCopy];
+    for (NSInteger i=0, k=str.length; i<k; i++) {
+        char c = [str characterAtIndex:i];
+        if (c == '(') {
+            removing++;
+        } else if (c == ')') {
+            removing--;
+        } else if (removing == 0) {
+            [output appendFormat:@"%c", c];
+        }
+    }
+    return output;
 }
 
 - (NSTask *)createTask {

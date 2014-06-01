@@ -125,15 +125,23 @@
 }
 
 - (void)search:(NSDictionary *)song {
-    self.searchTask = [MHSearch launchWithSelector:^(NSDictionary *data) {
-//        NSLog(@"Search: %@", data);
-        [(MHSongItem *)self.title.view setSong:data];
+    self.searchTask = [MHSearch launchWithSelector:^(NSDictionary *searchResult) {
+        NSLog(@"Search: %@", searchResult);
         
-        if (![self.currentInfo[@"song"][@"id"] isEqualToString:song[@"song"][@"id"]]) {
+        if (![self.currentInfo[@"song"][@"id"] isEqualToString:song[@"song"][@"id"]]
+            && (![self.currentInfo[@"song"][@"title"] isEqualToString:song[@"song"][@"title"]]
+                || ![self.currentInfo[@"artist"][@"name"] isEqualToString:song[@"artist"][@"name"]])) {
             NSLog(@"Send notification");
             self.currentInfo = song;
-            [self notification:self.currentInfo[@"artist"][@"name"]
-                          text:self.currentInfo[@"song"][@"title"]];
+            if (searchResult[@"title"]) {
+                [(MHSongItem *)self.title.view setSong:searchResult];
+                [self notification:searchResult[@"artist"][@"name"]
+                              text:searchResult[@"title"]];
+            } else {
+                [(MHSongItem *)self.title.view setSong:self.currentInfo];
+                [self notification:self.currentInfo[@"artist"][@"name"]
+                              text:self.currentInfo[@"song"][@"title"]];
+            }
         }
         
         [self stopAnimatingStatusBarIcon];

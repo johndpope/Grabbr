@@ -24,6 +24,7 @@
 		A2823BB11938D0CD0060029F /* deezer.png in Resources */ = {isa = PBXBuildFile; fileRef = A2823BB01938D0CD0060029F /* deezer.png */; };
 		A2823BB61938E6F60060029F /* MHSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = A2823BB51938E6F60060029F /* MHSearch.m */; };
 		A2823BB71938E7CA0060029F /* search.py in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2823BB21938E60F0060029F /* search.py */; };
+		A2823BB9193B63110060029F /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = A2823BB8193B63110060029F /* cover.png */; };
 		A289DAE518F0857E001D28EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A289DAE418F0857E001D28EA /* Cocoa.framework */; };
 		A289DAEF18F0857E001D28EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A289DAED18F0857E001D28EA /* InfoPlist.strings */; };
 		A289DAF118F0857E001D28EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A289DAF018F0857E001D28EA /* main.m */; };
@@ -134,6 +135,7 @@
 		A2823BB21938E60F0060029F /* search.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = search.py; sourceTree = "<group>"; };
 		A2823BB41938E6F60060029F /* MHSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHSearch.h; path = Classes/MHSearch.h; sourceTree = "<group>"; };
 		A2823BB51938E6F60060029F /* MHSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHSearch.m; path = Classes/MHSearch.m; sourceTree = "<group>"; };
+		A2823BB8193B63110060029F /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
 		A289DAE118F0857E001D28EA /* Grabbr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grabbr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A289DAE418F0857E001D28EA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A289DAE718F0857E001D28EA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -399,6 +401,7 @@
 		A289DB1818F090B2001D28EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A2823BB8193B63110060029F /* cover.png */,
 				A2823BB01938D0CD0060029F /* deezer.png */,
 				A2823BAB1938B9E00060029F /* shadow.png */,
 				A2823B8F19375D030060029F /* deezer-cover.jpg */,
@@ -675,6 +678,7 @@
 				A289DAEF18F0857E001D28EA /* InfoPlist.strings in Resources */,
 				A289DAF518F0857E001D28EA /* Credits.rtf in Resources */,
 				A2823B8E193757D50060029F /* MHPlaylistMenuItemView.xib in Resources */,
+				A2823BB9193B63110060029F /* cover.png in Resources */,
 				A289DB2A18F090B2001D28EA /* menuIcon7.tiff in Resources */,
 				A289DB2218F090B2001D28EA /* menuIcon.tiff in Resources */,
 				A289DAFB18F0857E001D28EA /* MainMenu.xib in Resources */,

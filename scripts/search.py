@@ -17,8 +17,8 @@ def search(artist, title):
 	for entry in data:
 		if entry["type"] != "track":
 			continue
-		if entry["artist"]["name"].lower() == artist.lower()	\
-			and entry["title"].lower() == title.lower():
+		if entry["artist"]["name"].lower().strip() == artist.lower().strip()	\
+			and entry["title"].lower().strip() == title.lower().strip():
 			toAdd = entry
 			break
 	if toAdd == None:

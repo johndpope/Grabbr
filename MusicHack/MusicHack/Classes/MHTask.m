@@ -72,7 +72,7 @@
              [[outPipe fileHandleForReading] waitForDataInBackgroundAndNotify];
          } else {
              [self.task terminate];
-             NSLog(@"output: '%@'", [self json:self.output]);
+//             NSLog(@"output: '%@'", [self json:self.output]);
              self.callback([self json:self.output]);
          }
      }];
